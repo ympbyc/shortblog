@@ -5,6 +5,8 @@ Super simple file-based CLI-oriented miniblog written in Common LISP.
 
 It is set up for my own use at this stage. Please apropreate core.lisp for your situation.
 
+![example diary](https://raw.githubusercontent.com/ympbyc/shortblog/gh-pages/blog/2021-03/thumbs/shot-2021-03-12_22-15-14.jpg)
+
 Usage
 -----
 
