@@ -99,7 +99,7 @@
   (loop for dir in (blogs-across-months)
      do (with-open-file (in (format nil "~a/text.txt" dir))
 	  (let ((date ""))
-	    (with-open-file (out (format nil "~a/~a.html" dir (pathname-month dir))
+	    (with-open-file (out (format nil "~a/index.html" dir)
 				 :direction :output
 				 :if-exists :supersede
 				 :if-does-not-exist :create)

@@ -29,4 +29,5 @@ Requirement
 
 tested on linux only.
 
-Copyleft Minori Yamashita
+
+OK to Copy, Modify, Use. Please visibly credit Minori Yamashita.
