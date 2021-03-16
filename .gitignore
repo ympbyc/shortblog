@@ -1,0 +1,8 @@
+*~
+\#*\*
+.\#*
+blog/*/*.JPG
+
+
+miniblog
+build-core.lisp

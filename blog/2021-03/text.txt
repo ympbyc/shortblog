@@ -1,0 +1,87 @@
+watched kids in the morning while S is away for yoga class @2021-03-01 20:21:36
+bike to Jinryo and joind kids running club as a staff @2021-03-01 20:22:26
+tommorow we go check out the route up the elephant mountain @2021-03-01 21:35:19
+emailed greenvalley hayashi-kun to look for a house in Kamibun @2021-03-01 22:24:1
+discovered ukon to be a great sedative for my body @2021-03-05 22:49:9
+watched kids in the morning. @2021-03-08 19:39:26
+worked with keita in the afternoon @2021-03-08 19:39:39
+IN: 5000 from Keita @2021-03-08 19:40:16
+built new miniblog core @2021-03-08 19:42:21
+test test test @2021-03-08 19:47:03
+TEST from home dir using alias @2021-03-08 19:52:56
+Hello @2021-03-08 20:19:38
+IDEA: 輪輪発明事務所　自転車関連の発明品や図面の販売 @2021-03-08 20:54:59
+禅の公案　無とはなにかを間断なく考え続ける @2021-03-08 20:56:14
+みっきーにうこんをプレゼントした。けいたくんが野菜をくれた。 @2021-03-08 20:56:48
+TODO: ベノワのbluetooth問題 @2021-03-08 20:58:17
+I have to find my way back to working with electronics @2021-03-08 20:58:55
+It's good that I work a little with computer again @2021-03-08 21:00:48
+net sync ホワイトボード @2021-03-08 21:01:13
+planted the kaki tree Keita and I dag yesterday in the garden @2021-03-09 08:34:34
+FILE: IMGP0033.JPG @2021-03-09 08:41:11
+FILE: IMGP0034.JPG @2021-03-09 08:41:13
+went to hatakeno-hi to borrow car from satoco @2021-03-10 18:28:18
+FILE: IMGP0001.JPG @2021-03-10 18:30:10
+FILE: IMGP0002.JPG @2021-03-10 18:30:10
+FILE: IMGP0003.JPG @2021-03-10 18:30:11
+FILE: IMGP0004.JPG @2021-03-10 18:30:11
+drove to Konan-Pro to get materials for solar wall! @2021-03-10 18:33:20
+Photos from yesterday:  @2021-03-10 18:33:49
+FILE: IMGP0035.JPG @2021-03-10 18:33:58
+FILE: IMGP0036.JPG @2021-03-10 18:33:58
+FILE: IMGP0037.JPG @2021-03-10 18:33:58
+FILE: IMGP0038.JPG @2021-03-10 18:33:58
+FILE: IMGP0039.JPG @2021-03-10 18:33:58
+FILE: IMGP0040.JPG @2021-03-10 18:33:58
+FILE: IMGP0041.JPG @2021-03-10 18:33:58
+FILE: IMGP0042.JPG @2021-03-10 18:33:59
+SCRIPT: for f in /mnt/DCIM/XXX/*.JPG; do sbcl --core miniblog --eval "(miniblog::add-media \"$f\")" --quit; done @2021-03-10 18:39:40
+ordered glassfiber mesh online @2021-03-10 18:45:03
+SCHEDULE: 3/27 Ono-sakura-nobutai moritsukuri @2021-03-10 18:45:49
+TODO: draw net-zero-office-plan and send it to Inobe-san @2021-03-10 18:46:50
+FILE: IMGP0005.JPG @2021-03-11 22:29:41
+FILE: IMGP0006.JPG @2021-03-11 22:29:41
+FILE: IMGP0007.JPG @2021-03-11 22:29:41
+FILE: IMGP0008.JPG @2021-03-11 22:29:41
+FILE: IMGP0009.JPG @2021-03-11 22:29:41
+FILE: IMGP0010.JPG @2021-03-11 22:29:41
+went to Naruto with friends to hunt wakame @2021-03-11 22:30:36
+Bike to Komatsushima and bought 5 packets of ukon. I then went to fishing shop and bought a short telescopic rod+reel. I wanted to go to the harbor to fish but the rain became severe so I biked home. @2021-03-12 20:34:56
+miniblogのhtml生成機能を作った。WTFPLで90行のhtml->stringを使った。quasiquoteとunquoteで制御できて単純便利。写真の公開制御なにかうまいこと考えついたらgithub pagesで公開したい。 @2021-03-12 22:23
+FILE: shot-2021-03-12_22-15-14.jpg @2021-03-12 22:25:40
+FILE: IMGP0011.JPG @2021-03-14 08:22
+昨日夕方Super cubのカウルとミラーを交換。旭風防のショートバイザーを取り付けた。試しに山城まで走る。リアタイヤが減っている。 @2021-03-14 08:23
+cli interface test @2021-03-14 20:46
+朝、家族で鎌田さん家に行く。脱穀したそばの唐箕がけ。お好み焼きを焼いてくれた。2013年の梅酒が美味しい。 @2021-03-14 21:50
+その後、海、天と森林公園へ。ポテレット広場で延々と遊ぶ。 @2021-03-14 21:51
+カメラを落としてきたので一度帰ってからもう一度カブで登って探しに行った。見つかった記念に一枚。 @2021-03-14 21:52
+FILE: IMGP0012.JPG @2021-03-14 21:55
+FILE: IMGP0013.JPG @2021-03-14 21:55
+FILE: IMGP0014.JPG @2021-03-14 21:55
+FILE: IMGP0015.JPG @2021-03-14 21:55
+FILE: IMGP0016.JPG @2021-03-14 21:55
+FILE: IMGP0017.JPG @2021-03-14 21:55
+FILE: IMGP0018.JPG @2021-03-14 21:55
+FILE: IMGP0019.JPG @2021-03-14 21:55
+FILE: IMGP0020.JPG @2021-03-14 21:55
+FILE: IMGP0021.JPG @2021-03-14 21:55
+FILE: IMGP0022.JPG @2021-03-14 21:55
+FILE: IMGP0023.JPG @2021-03-14 21:55
+FILE: IMGP0024.JPG @2021-03-14 21:55
+FILE: IMGP0025.JPG @2021-03-14 21:55
+Made a CLI interface for miniblog using buildapp. Now I can do `shortblog make-post "blah blah"`, `shortblog add-media "/mnt/DCIM/xxx/yyy.JPG"`, etc. It even outputs help messages when error occures. @2021-03-14 22:06
+TODO: imagemagick thumbnail generation. be sure to strip exif @2021-03-14 22:16
+FILE: IMGP0026.JPG @2021-03-16 12:16
+FILE: IMGP0027.JPG @2021-03-16 12:16
+FILE: IMGP0028.JPG @2021-03-16 12:16
+FILE: IMGP0029.JPG @2021-03-16 12:16
+yesterday sea, sky and me went to mori-no-hi. good time. @2021-03-16 12:18
+I made a solar wall. It works. TODO: put duct fan. place it on the roof. @2021-03-16 12:19
+MAINTENANCE: Changed engine oil for the cub at 286667km. @2021-03-16 12:20
+_shinzennin_ @2021-03-16 12:21
+FILE: IMGP0030.JPG @2021-03-16 12:25
+FILE: IMGP0031.JPG @2021-03-16 21:34
+FILE: IMGP0032.JPG @2021-03-16 21:35
+徳島スーパーカブでリアタイアの交換を依頼。丁寧に見てくれて、チェーンも交換してくれた。今まで悩みの種だった、走行中の周期的な引っかかったような揺れが消失。とても調子が良くなった。自賠責が切れていたので手続きして、2年分登録した。 @2021-03-16 21:38
+バイク修理後小神子海岸に釣りに行った。穴釣り用の竿はチョイ投げに向いていない。チョイ投げ用の竿が欲しい。釣果0匹 @2021-03-16 21:39
+sbcl独自拡張の外部プログラム呼び出しでimagemagickを呼んで、サムネイルを生成するようにした。 @2021-03-16 23:30
