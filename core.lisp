@@ -52,8 +52,9 @@
 (defun add-media (source-path)
   (with-blogdir
     (let ((source-path (uiop:ensure-pathname source-path))
-	  (filename    (format nil "~a.~a"
+	  (filename    (format nil "~a-~a-~a.~a"
 			       (pathname-name source-path)
+			       (today-str) (regex-replace "\:" (time-str) "-")
 			       (pathname-type source-path))))
       (copy-file
        source-path (format nil "~a~a" blogdir filename))

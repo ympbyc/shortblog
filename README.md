@@ -7,6 +7,18 @@ It is set up for my own use at this stage. It's meant to be hacked to suit your 
 
 ![example diary](https://raw.githubusercontent.com/ympbyc/shortblog/gh-pages/blog/2021-03/thumbs/shot-2021-03-12_22-15-14.jpg)
 
+Install
+-------
+
+```
+git clone [this repo]
+rm -rf ./blog/**
+cd shortblog
+./build.sh
+chmod u+x shortblog
+#[move shortblog under your $PATH]
+```
+
 Usage
 -----
 
