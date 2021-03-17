@@ -9,6 +9,7 @@
 (in-package :miniblog)
 
 (defparameter *blog-home* "~/Work/miniblog")
+(defparameter *blog-title*  "NORISOFT diary")
 
 (defun blog-rel-path (x)
   (format nil "~a/~a" *blog-home* x))
@@ -93,38 +94,65 @@
 			      ,thumb-name)
 			   :search t :wait t :output out))))))))
 
+(defmacro html-head (title)
+  `(head () (meta (charset "utf-8"))
+	 (title () ,title)
+	 (style () "
+img{max-width:100%} 
+p  {line-height:1.8em}")))
+
+
+(defun build-html (dir text-txt blog-html)
+  (let ((date "")
+	(title (format nil "~a | ~a" (pathname-month dir) *blog-title*)))
+    (with-open-file (in text-txt)
+	  (with-open-file (out blog-html
+			       :direction :output
+			       :if-exists :supersede
+			       :if-does-not-exist :create)
+	    (println "<!doctype html>" out)
+	    (println (html:html->string
+		      `(html (lang "ja")
+			     ,(html-head title)
+			     (body ()
+				   (h1 () ,title)
+				   ,@(loop for line in (reverse (read-file-lines in))
+					for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
+					collect `(,(if (string/= date day)
+						       (progn (setq date day) `((h2 () ,day))))
+						   ,(cond
+						      ((string= "FILE:" (subseq line 0 5))
+						       (multiple-value-bind (x match)
+							   (ppcre:scan-to-strings "FILE:\ ([^\@]+)" line)
+							 (declare (ignore x))
+							 `(img (src ,(format nil "thumbs/~a" (aref match 0)) width 320))))
+						      (t `(p ()
+							     ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list)))))))))
+		     out)))))
 
 (defun save-html ()
   (generate-thumbnails)
   (loop for dir in (blogs-across-months)
-     do (with-open-file (in (format nil "~a/text.txt" dir))
-	  (let ((date ""))
-	    (with-open-file (out (format nil "~a/index.html" dir)
-				 :direction :output
-				 :if-exists :supersede
-				 :if-does-not-exist :create)
-	      (println "<!doctype html>" out)
-	      (println (html:html->string
-			`(html (lang "ja")
-			       (head () (meta (charset "utf-8")) (title () ,(pathname-month dir))
-					(style () "
-img{max-width:100%} 
-p  {line-height:1.8em}"))
-			       (body ()
-				     (h1 () ,(pathname-month dir))
-				     ,@(loop for line in (reverse (read-file-lines in))
-					  for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
-					  collect `(,(if (string/= date day)
-							 (progn (setq date day) `((h2 () ,day))))
-						     ,(cond
-							((string= "FILE:" (subseq line 0 5))
-							 (multiple-value-bind (x match)
-							     (ppcre:scan-to-strings "FILE:\ ([^\@]+)" line)
-							   (declare (ignore x))
-							   `(img (src ,(format nil "thumbs/~a" (aref match 0)) width 320))))
-							(t `(p ()
-							       ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list)))))))))
-		       out))))))
+     for text-txt   = (format nil "~a/text.txt" dir)
+     for blog-html = (format nil "~a/index.html" dir)
+     for html-exists = (uiop:file-exists-p blog-html)
+     for date = ""
+       ;;process new files only
+     when (or (not html-exists)
+	      (and html-exists
+		   (< (uiop:safe-file-write-date blog-html)
+		      (uiop:safe-file-write-date text-txt))))
+     do (build-html dir text-txt blog-html))
+  (with-open-file (out (format nil "~a/index.html" (blog-rel-path "blog")))
+    (println "<!doctype html>" out)
+    (println (html:html->string
+	      `(html (lang "ja")
+		     ,(html-head (format nil "~a index" *blog-title*))
+		     (body () (h1 (),*blog-title*)
+			   (ul ()
+			       ,(loop for dir in (blogs-across-months)
+				   for blog = (format nil "~a/index.html" dir)
+				   collect `(li () (a (href blog) (pathname-month dir)))))))))))
 
 
 (defun function-named (name)
