@@ -40,6 +40,7 @@ Requirement
 + quicklisp (for uiop, ppcre)
 + [buildapp](https://www.xach.com/lisp/buildapp)
 + Imagemagick
++ facedetect
 
 tested on linux only.
 

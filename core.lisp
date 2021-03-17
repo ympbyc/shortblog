@@ -10,6 +10,8 @@
 
 (defparameter *blog-home* "~/Work/miniblog")
 (defparameter *blog-title*  "NORISOFT diary")
+(defparameter *thumbnail-size* "320")
+(defparameter *blur-faces* t)
 
 (defun blog-rel-path (x)
   (format nil "~a/~a" *blog-home* x))
@@ -79,21 +81,29 @@
   `(sort (subdirectories (blog-rel-path "blog/")) #'string>
 	 :key #'pathname-month))
 
-(defun generate-thumbnails ()
+(defun generate-thumbnails (&key force)
   (loop for dir in (blogs-across-months)
      do (loop for file in (uiop:directory-files dir)
 	     when (member (string-upcase (pathname-type file)) '("JPG" "PNG" "GIF") :test #'string=)
 	   do (let* ((thumbs-dir (format nil "~athumbs/" dir))
-		     (thumb-name (format nil "~a~a.~a" thumbs-dir (pathname-name file) (pathname-type file))))
+		     (thumb-name (format nil "~a~a.~a" thumbs-dir (pathname-name file) (pathname-type file)))
+		     (facep nil))
 		(ensure-directories-exist thumbs-dir)
-		(unless (uiop:file-exists-p thumb-name)
-		    (format t "~a: ~a~%" file
-			(with-output-to-string (out)
-			  (sb-ext:run-program
-			   "convert"
-			   `(,(format nil "~a" file) "-thumbnail" "320"
-			      ,thumb-name)
-			   :search t :wait t :output out))))))))
+		(when (or force (not (uiop:file-exists-p thumb-name)))
+		  (if *blur-faces*
+		      (handler-case
+			  (setq facep
+				(= 0 (sb-ext:process-exit-code
+				      (sb-ext:run-program "facedetect" `("-q" ,(format nil "~a" file)) :search t :wait t))))
+			(t (c) (format t "NOTICE: ~a" c))))
+		  (format t "~a: ~a~%" file
+			  (with-output-to-string (out)
+			    (sb-ext:run-program
+			     "convert"
+			     `(,(format nil "~a" file) "-thumbnail" ,*thumbnail-size*
+				     ,@(when facep `("+noise" "Gaussian" "-noise" "4"))
+				,thumb-name)
+			     :search t :wait t :output out))))))))
 
 (defun html-head (title)
   `(head () (meta (charset "utf-8"))

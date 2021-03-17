@@ -1,7 +1,9 @@
 *~
 \#*\#
 .\#*
-blog/*/*.JPG
+blog/*/*
+!blog/*/index.html
+!blog/*/thumbs/
 
 
 miniblog
