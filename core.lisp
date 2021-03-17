@@ -94,7 +94,7 @@
 			      ,thumb-name)
 			   :search t :wait t :output out))))))))
 
-(defmacro html-head (title)
+(defun html-head (title)
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (style () "
@@ -127,14 +127,15 @@ p  {line-height:1.8em}")))
 							 (declare (ignore x))
 							 `(img (src ,(format nil "thumbs/~a" (aref match 0)) width 320))))
 						      (t `(p ()
-							     ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list)))))))))
+							     ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list))))))
+				   (a (href "../index.html") "->INDEX"))))
 		     out)))))
 
 (defun save-html ()
   (generate-thumbnails)
   (loop for dir in (blogs-across-months)
-     for text-txt   = (format nil "~a/text.txt" dir)
-     for blog-html = (format nil "~a/index.html" dir)
+     for text-txt   = (format nil "~atext.txt" dir)
+     for blog-html = (format nil "~aindex.html" dir)
      for html-exists = (uiop:file-exists-p blog-html)
      for date = ""
        ;;process new files only
@@ -143,7 +144,10 @@ p  {line-height:1.8em}")))
 		   (< (uiop:safe-file-write-date blog-html)
 		      (uiop:safe-file-write-date text-txt))))
      do (build-html dir text-txt blog-html))
-  (with-open-file (out (format nil "~a/index.html" (blog-rel-path "blog")))
+  (with-open-file (out (format nil "~a/index.html" (blog-rel-path "blog"))
+		       :direction :output
+		       :if-exists :supersede
+		       :if-does-not-exist :create)
     (println "<!doctype html>" out)
     (println (html:html->string
 	      `(html (lang "ja")
@@ -151,8 +155,9 @@ p  {line-height:1.8em}")))
 		     (body () (h1 (),*blog-title*)
 			   (ul ()
 			       ,(loop for dir in (blogs-across-months)
-				   for blog = (format nil "~a/index.html" dir)
-				   collect `(li () (a (href blog) (pathname-month dir)))))))))))
+				   for blog = (format nil "~a/index.html" (pathname-month dir))
+				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))
+	     out)))
 
 
 (defun function-named (name)

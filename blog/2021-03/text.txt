@@ -87,3 +87,21 @@ FILE: IMGP0032.JPG @2021-03-16 21:35
 sbcl独自拡張の外部プログラム呼び出しでimagemagickを呼んで、サムネイルを生成するようにした。 @2021-03-16 23:30
 SHORTBLOG now generates index page @2021-03-17 11:20
 I worked a bit too much on SHORTBLOG last night. I couldn't wake up in the morning. I have to limit myself. @2021-03-17 11:22
+HAIKU: 萌え草や古木が煙り豆煮える @2021-03-17 12:49
+HAIKU: 焚火湯で淹れる薄めの熱コーヒー @2021-03-17 12:50
+HAIKU: 母からの荷物は紅茶ときらず揚げ @2021-03-17 12:54
+FILE: IMGP0038.JPG @2021-03-17 21:01
+FILE: IMGP0039.JPG @2021-03-17 21:02
+FILE: IMGP0040.JPG @2021-03-17 21:02
+FILE: IMGP0041.JPG @2021-03-17 21:02
+FILE: IMGP0043.JPG @2021-03-17 21:02
+FILE: IMGP0044.JPG @2021-03-17 21:02
+FILE: IMGP0052.JPG @2021-03-17 21:03
+FILE: IMGP0053.JPG @2021-03-17 21:03
+FILE: IMGP0055.JPG @2021-03-17 21:03
+FILE: IMGP0056.JPG @2021-03-17 21:04
+FILE: IMGP0057.JPG @2021-03-17 21:04
+FILE: IMGP0058.JPG @2021-03-17 21:04
+家族で味噌作り。焚き火で豆を炊いて、潰して、米麹と塩を入れて混ぜて、壺に投げつける。いい陽気であった。 @2021-03-17 21:06
+FILE: IMGP0050.JPG @2021-03-17 21:07
+battery -> cub. The battery was dead so I charged it with solar with a deep cycle battery in parallel. Hopefully it recovers. @2021-03-17 21:09
