@@ -10,8 +10,10 @@
 
 (defparameter *blog-home* "~/Work/miniblog")
 (defparameter *blog-title*  "NORISOFT diary")
-(defparameter *thumbnail-size* "320")
-(defparameter *blur-faces* t)
+(defparameter *thumbnail-size* "640")
+(defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "6"))
+(defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
+(defparameter *author-name* "norimixer")
 
 (defun blog-rel-path (x)
   (format nil "~a/~a" *blog-home* x))
@@ -101,7 +103,7 @@
 			    (sb-ext:run-program
 			     "convert"
 			     `(,(format nil "~a" file) "-thumbnail" ,*thumbnail-size*
-				     ,@(when facep `("+noise" "Gaussian" "-noise" "4"))
+				     ,@(when facep *blur-faces*)
 				,thumb-name)
 			     :search t :wait t :output out))))))))
 
@@ -112,6 +114,14 @@
 img{max-width:100%} 
 p  {line-height:1.8em}")))
 
+(defmacro match-0 (s-t-s)
+  `(multiple-value-bind (_ match)
+       ,s-t-s
+     (declare (ignore _))
+     (aref match 0)))
+
+(defun post-file-path (post)
+  (match-0 (ppcre:scan-to-strings "FILE:\ ([^\@]+)" post)))
 
 (defun build-html (dir text-txt blog-html)
   (let ((date "")
@@ -133,10 +143,7 @@ p  {line-height:1.8em}")))
 						       (progn (setq date day) `((h2 () ,day))))
 						   ,(cond
 						      ((string= "FILE:" (subseq line 0 5))
-						       (multiple-value-bind (x match)
-							   (ppcre:scan-to-strings "FILE:\ ([^\@]+)" line)
-							 (declare (ignore x))
-							 `(img (src ,(format nil "thumbs/~a" (aref match 0)) width 320))))
+						       `(img (src ,(format nil "thumbs/~a" (match-0 (post-file-path line))) width 320)))
 						      (t `(p ()
 							     ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list))))))
 				   (a (href "../index.html") "->INDEX"))))
@@ -168,6 +175,48 @@ p  {line-height:1.8em}")))
 			       ,(loop for dir in (blogs-across-months)
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
 				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))
+	     out)))
+
+(defparameter days '("Mon" "Tue" "Wed" "Thu" "Fri" "Sat" "Sun"))
+(defparameter months '("Dec" "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"))
+
+(defun rfc822-date (univ-time)
+  (multiple-value-bind (sec min hour date month year dow dls timezone)
+      (decode-universal-time univ-time) (declare (ignore dls)) (format nil "~a, ~2,'0d ~a ~4,'0d ~2,'0d:~2,'0d:~2,'0d ~a~2,'0d00" (nth dow days) date (nth month months) year hour min sec (if (< (* -1 timezone) 0) "-" "+") (* -1 timezone))))
+
+(defun post-date-str (post)
+  (match-0
+      (scan-to-strings "@([\\d\:\-\\s]+)" post)))
+
+(defun post-date (post)
+  (let* ((dt (reverse (mapcar #'parse-integer (split-string (post-date-str post)
+							    :separator "\ |\:|\-"))))
+	 (dt (if (< (length dt) 6) (cons 0 dt) dt)))
+    (setf (nth 2 dt) (mod (nth 2 dt) 24))
+    (apply #'encode-universal-time dt)))
+
+(defun save-rss ()
+  (with-open-file (out (blog-rel-path "blog/feed.rss")
+		       :direction :output
+		       :if-exists :supersede
+		       :if-does-not-exist :create)
+    (println "<?xml version=\"1.0\" encoding=\"utf-8\"?>" out)
+    (println (html:html->string
+	      `(rss (version "2.0")
+		    (channel ()
+			     (title () ,*blog-title*)
+			     (|link| () ,(format nil "~aindex.html" *public-root-url*))
+			     (copyright () ,(format nil "Copyright (c) ~a" *author-name*))
+			     (|lastBuildDate| () ,(rfc822-date (get-universal-time)))
+			     (generator () "shortblog https://github.com/ympbyc/shortblog")
+			     ,@(loop for dir in (blogs-across-months)
+				 for text-txt   = (format nil "~atext.txt" dir)
+				  collect (with-open-file (in text-txt)
+					    (loop for line = (read-line in nil nil)
+					       while line
+					       collect `(item ()
+							      (title () ,(scan-to-strings "[^@]+" line))
+							      (|pubDate| () ,(rfc822-date (post-date line))))))))))
 	     out)))
 
 
