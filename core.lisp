@@ -14,6 +14,7 @@
 (defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "6"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
 (defparameter *author-name* "norimixer")
+(defparameter *language* "ja")
 
 (defun blog-rel-path (x)
   (format nil "~a/~a" *blog-home* x))
@@ -111,8 +112,15 @@
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (style () "
+body{background: rgb(234,233,228)}
+h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
 img{max-width:100%} 
-p  {line-height:1.8em}")))
+p  {line-height:1.8em; margin: 1em 0}
+* {margin: 0; padding: 0}
+article {border-bottom: 2px solid rgb(230,194,19); margin: 2em 0;padding: 0 1em}
+article p{background:rgba(255,255,255,0.5); padding: 0 1em}
+article .time{color:#c3c3c3;font-size:0.7em; float:right}")))
+
 
 (defmacro match-0 (s-t-s)
   `(multiple-value-bind (_ match)
@@ -123,9 +131,38 @@ p  {line-height:1.8em}")))
 (defun post-file-path (post)
   (match-0 (ppcre:scan-to-strings "FILE:\ ([^\@]+)" post)))
 
-(defun build-html (dir text-txt blog-html)
+(defun build-articles (in-txt)
   (let ((date "")
-	(title (format nil "~a | ~a" (pathname-month dir) *blog-title*)))
+	(posts/day '())
+	(html '()))
+    (macrolet ((make-article ()
+		 `(push
+		   `(article ()
+			     (h2 () ,date)
+			     ,@(loop for post in posts/day
+				  collect (cond
+					    ((string= "FILE:" (subseq post 0 5))
+					     `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320)))
+					    (t `(p ()
+						   ,(let ((x (scan-group "(.*)@.*\ (.*)$" post)))
+						      `(,(aref x 0) (span (class "time") ,(aref x 1)))))))))
+		   html)))
+      (loop for line = (read-line in-txt nil nil)
+	 while line
+	 for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
+	 do (if (string/= day date)
+		(progn
+		  (if posts/day (make-article))
+		  (setq date day)
+		  (setq posts/day (list line)))
+		(push line posts/day)))
+      (make-article))
+    html))
+
+
+(defun build-html (dir text-txt blog-html)
+  (println "building html....")
+  (let ((title (format nil "~a | ~a" (pathname-month dir) *blog-title*)))
     (with-open-file (in text-txt)
 	  (with-open-file (out blog-html
 			       :direction :output
@@ -133,23 +170,15 @@ p  {line-height:1.8em}")))
 			       :if-does-not-exist :create)
 	    (println "<!doctype html>" out)
 	    (println (html:html->string
-		      `(html (lang "ja")
+		      `(html (lang ,*language*)
 			     ,(html-head title)
 			     (body ()
 				   (h1 () ,title)
-				   ,@(loop for line in (reverse (read-file-lines in))
-					for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
-					collect `(,(if (string/= date day)
-						       (progn (setq date day) `((h2 () ,day))))
-						   ,(cond
-						      ((string= "FILE:" (subseq line 0 5))
-						       `(img (src ,(format nil "thumbs/~a" (match-0 (post-file-path line))) width 320)))
-						      (t `(p ()
-							     ,(coerce (scan-group "(.*)@.*\ (.*)$" line) 'list))))))
+				   ,@(build-articles in)
 				   (a (href "../index.html") "->INDEX"))))
 		     out)))))
 
-(defun save-html ()
+(defun save-html (&key force)
   (generate-thumbnails)
   (loop for dir in (blogs-across-months)
      for text-txt   = (format nil "~atext.txt" dir)
@@ -157,7 +186,8 @@ p  {line-height:1.8em}")))
      for html-exists = (uiop:file-exists-p blog-html)
      for date = ""
        ;;process new files only
-     when (or (not html-exists)
+     when (or force
+	      (not html-exists)
 	      (and html-exists
 		   (< (uiop:safe-file-write-date blog-html)
 		      (uiop:safe-file-write-date text-txt))))
@@ -205,6 +235,7 @@ p  {line-height:1.8em}")))
 	      `(rss (version "2.0")
 		    (channel ()
 			     (title () ,*blog-title*)
+			     (lang ,*language*)
 			     (|link| () ,(format nil "~aindex.html" *public-root-url*))
 			     (copyright () ,(format nil "Copyright (c) ~a" *author-name*))
 			     (|lastBuildDate| () ,(rfc822-date (get-universal-time)))

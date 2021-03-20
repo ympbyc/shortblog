@@ -113,3 +113,8 @@ FILE: IMGP0063-2021-03-19-10-26.JPG @2021-03-19 10:26
 FILE: IMGP0064-2021-03-19-10-26.JPG @2021-03-19 10:26
 3/18 自主保育。焚き火でご飯と味噌汁を炊いていたら隣のおばあさんに苦情を言われる。 @2021-03-19 10:27
 3/18 trail running with kids.  staff: mio, kocchan. loved kocchan's cookies @2021-03-19 10:28
+PLANTSのチラシを配った。ブッダカフェ、コンプレックス、豆ちよ、改善センター、作良家、丸池商店など @2021-03-19 23:26
+shortblog now generates rss feed but it needs improvement @2021-03-19 23:27
+DEV(shortblog): make html structure better @2021-03-20 12:05
+FILE: Screen Shot 2021-03-20 at 12.06.50-2021-03-20-12-08.png @2021-03-20 12:08
+DEV(shortblog): style a little bit @2021-03-20 12:08
