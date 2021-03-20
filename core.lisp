@@ -112,7 +112,7 @@
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (style () "
-body{background: rgb(234,233,228)}
+body{background: rgb(236,235,2330)}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
 img{max-width:100%} 
 p  {line-height:1.8em; margin: 1em 0}
