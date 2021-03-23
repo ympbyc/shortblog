@@ -10,8 +10,8 @@
 
 (defparameter *blog-home* "~/Work/miniblog")
 (defparameter *blog-title*  "NORISOFT diary")
-(defparameter *thumbnail-size* "640")
-(defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "6"))
+(defparameter *thumbnail-size* "320")
+(defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "4"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
 (defparameter *author-name* "norimixer")
 (defparameter *language* "ja")
@@ -104,7 +104,7 @@
 			    (sb-ext:run-program
 			     "convert"
 			     `(,(format nil "~a" file) "-thumbnail" ,*thumbnail-size*
-				     ,@(when facep *blur-faces*)
+				     ,@(when (or t facep) *blur-faces*)
 				,thumb-name)
 			     :search t :wait t :output out))))))))
 
