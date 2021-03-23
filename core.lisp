@@ -59,7 +59,7 @@
     (let ((source-path (uiop:ensure-pathname source-path))
 	  (filename    (format nil "~a-~a-~a.~a"
 			       (pathname-name source-path)
-			       (today-str) (regex-replace "\:" (time-str) "-")
+			       (today-str) (regex-replace "[\:\ ]" (time-str) "-")
 			       (pathname-type source-path))))
       (copy-file
        source-path (format nil "~a~a" blogdir filename))
@@ -112,14 +112,16 @@
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (style () "
-body{background: rgb(236,235,2330)}
+body{background: rgb(236,235,230)}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
+h2 {font-size: 1.2em; }
 img{max-width:100%} 
 p  {line-height:1.8em; margin: 1em 0}
 * {margin: 0; padding: 0}
 article {border-bottom: 2px solid rgb(230,194,19); margin: 2em 0;padding: 0 1em}
-article p{background:rgba(255,255,255,0.5); padding: 0 1em}
-article .time{color:#c3c3c3;font-size:0.7em; float:right}")))
+article p{background:rgba(255,255,255,0.2); padding: 0 1em}
+article .time{color:#c3c3c3;font-size:0.7em; float:right}
+ul {list-style-type:circle}")))
 
 
 (defmacro match-0 (s-t-s)
@@ -142,7 +144,10 @@ article .time{color:#c3c3c3;font-size:0.7em; float:right}")))
 			     ,@(loop for post in posts/day
 				  collect (cond
 					    ((string= "FILE:" (subseq post 0 5))
-					     `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320)))
+					     `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320
+							alt ,date)))
+					    ((string= "PRIVATE:" (subseq post 0 8))
+					     `())
 					    (t `(p ()
 						   ,(let ((x (scan-group "(.*)@.*\ (.*)$" post)))
 						      `(,(aref x 0) (span (class "time") ,(aref x 1)))))))))
@@ -201,7 +206,7 @@ article .time{color:#c3c3c3;font-size:0.7em; float:right}")))
 	      `(html (lang "ja")
 		     ,(html-head (format nil "~a index" *blog-title*))
 		     (body () (h1 (),*blog-title*)
-			   (ul ()
+			   (ul (style "margin: 1em 2em")
 			       ,(loop for dir in (blogs-across-months)
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
 				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))

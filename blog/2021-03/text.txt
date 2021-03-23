@@ -5,7 +5,7 @@ emailed greenvalley hayashi-kun to look for a house in Kamibun @2021-03-01 22:24
 discovered ukon to be a great sedative for my body @2021-03-05 22:49:9
 watched kids in the morning. @2021-03-08 19:39:26
 worked with keita in the afternoon @2021-03-08 19:39:39
-IN: 5000 from Keita @2021-03-08 19:40:16
+PRIVATE: IN: 5000 from Keita @2021-03-08 19:40:16
 built new miniblog core @2021-03-08 19:42:21
 test test test @2021-03-08 19:47:03
 TEST from home dir using alias @2021-03-08 19:52:56
@@ -118,3 +118,21 @@ shortblog now generates rss feed but it needs improvement @2021-03-19 23:27
 DEV(shortblog): make html structure better @2021-03-20 12:05
 FILE: Screen Shot 2021-03-20 at 12.06.50-2021-03-20-12-08.png @2021-03-20 12:08
 DEV(shortblog): style a little bit @2021-03-20 12:08
+FILE: IMGP0067-2021-03-20-16-22.JPG @2021-03-20 16:22
+FILE: IMGP0068-2021-03-20-16-22.JPG @2021-03-20 16:22
+FILE: IMGP0069-2021-03-20-16-22.JPG @2021-03-20 16:22
+went for a little walk and found a nice tree to climb @2021-03-20 16:22
+went to monostock and bought a wooden box to put on the back of the cub @2021-03-21 13:29
+listening to bbc crowdscience @2021-03-21 15:17
+Finally emailed Benoit. @2021-03-21 15:18
+FILE: IMGP0070-2021-03-23-11-55.JPG @2021-03-23 11:55
+FILE: IMGP0074-2021-03-23-11-58.JPG @2021-03-23 11:58
+FILE: IMGP0073-2021-03-23-11-59.JPG @2021-03-23 11:59
+FILE: IMGP0071-2021-03-23-11-59.JPG @2021-03-23 11:59
+FILE: IMGP0081-2021-03-23-12-00.JPG @2021-03-23 12:00
+FILE: IMGP0083-2021-03-23-12-00.JPG @2021-03-23 12:00
+FILE: IMGP0088-2021-03-23-12-01.JPG @2021-03-23 12:01
+FILE: IMGP0098-2021-03-23-12-01.JPG @2021-03-23 12:01
+3/22 trail running @2021-03-23 12:41
+3/22 went to the park with sky, sea @2021-03-23 12:42
+stayed home with sky. Went out many times. Sun is warm. Met many grandmas @2021-03-23 12:43

@@ -8,3 +8,4 @@ blog/*/*
 
 miniblog
 build-core.lisp
+publish
