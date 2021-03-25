@@ -104,7 +104,7 @@
 			    (sb-ext:run-program
 			     "convert"
 			     `(,(format nil "~a" file) "-thumbnail" ,*thumbnail-size*
-				     ,@(when (or t facep) *blur-faces*)
+				     ,@(when facep *blur-faces*)
 				,thumb-name)
 			     :search t :wait t :output out))))))))
 
