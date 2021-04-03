@@ -7,5 +7,6 @@ blog/*/*
 
 
 miniblog
+miniblog.core
 build-core.lisp
 publish

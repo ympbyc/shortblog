@@ -121,7 +121,8 @@ p  {line-height:1.8em; margin: 1em 0}
 article {border-bottom: 2px solid rgb(230,194,19); margin: 2em 0;padding: 0 1em}
 article p{background:rgba(255,255,255,0.2); padding: 0 1em}
 article .time{color:#c3c3c3;font-size:0.7em; float:right}
-ul {list-style-type:circle}")))
+ul {list-style-type:circle}
+.link-top {float:right;padding-right:1.6em}")))
 
 
 (defmacro match-0 (s-t-s)
@@ -184,6 +185,7 @@ ul {list-style-type:circle}")))
 			     ,(html-head title)
 			     (body ()
 				   (h1 () ,title)
+				   (a (href "../index.html" class "link-top") "->INDEX")
 				   ,@(build-articles in)
 				   (a (href "../index.html") "->INDEX"))))
 		     out)))))
