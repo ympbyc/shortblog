@@ -9,7 +9,8 @@
 (in-package :miniblog)
 
 (defparameter *blog-home* "~/Work/miniblog")
-(defparameter *blog-title*  "NORISOFT diary")
+(defparameter *blog-title*  "NORI-FIX diary")
+(defparameter *blog-description* "[nori-fix/ympbyc] I like to fix/remake and use old things.")
 (defparameter *thumbnail-size* "320")
 (defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "4"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
@@ -111,6 +112,7 @@
 (defun html-head (title)
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
+	 (meta (name "description" content ,*blog-description*))
 	 (style () "
 body{background: rgb(236,235,230)}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
@@ -119,10 +121,12 @@ img{max-width:100%}
 p  {line-height:1.8em; margin: 1em 0}
 * {margin: 0; padding: 0}
 article {border-bottom: 2px solid rgb(230,194,19); margin: 2em 0;padding: 0 1em}
-article p{background:rgba(255,255,255,0.2); padding: 0 1em}
+article p, .profile{background:rgba(255,255,255,0.2); padding: 0 1em}
 article .time{color:#c3c3c3;font-size:0.7em; float:right}
 ul {list-style-type:circle}
-.link-top {float:right;padding-right:1.6em}")))
+.link-top {float:right;padding-right:1.6em}
+.icon {border-radius:50%; width: 60px;height:60px;}
+.profile {padding: 1em; width:max-content; overflow:hidden}")))
 
 
 (defmacro match-0 (s-t-s)
@@ -213,6 +217,7 @@ ul {list-style-type:circle}
 	      `(html (lang "ja")
 		     ,(html-head (format nil "~a index" *blog-title*))
 		     (body () (h1 (),*blog-title*)
+			   (p (class "profile") (img (class "icon" src "profile.jpg" alt "profile picture of the author")) (br ()) ,*blog-description*)
 			   (ul (style "margin: 1em 2em")
 			       ,(loop for dir in (blogs-across-months)
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
