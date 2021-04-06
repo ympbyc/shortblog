@@ -10,7 +10,7 @@
 
 (defparameter *blog-home* "~/Work/miniblog")
 (defparameter *blog-title*  "NORI-FIX diary")
-(defparameter *blog-description* "[nori-fix/ympbyc] I like to fix/remake and use old things.")
+(defparameter *blog-description* "(nori-fix|ympbyc) I like to (fix|remake) and use old things.")
 (defparameter *thumbnail-size* "320")
 (defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "4"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
@@ -126,7 +126,7 @@ article .time{color:#c3c3c3;font-size:0.7em; float:right}
 ul {list-style-type:circle}
 .link-top {float:right;padding-right:1.6em}
 .icon {border-radius:50%; width: 60px;height:60px;}
-.profile {padding: 1em; width:max-content; overflow:hidden}")))
+.profile {padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}")))
 
 
 (defmacro match-0 (s-t-s)
