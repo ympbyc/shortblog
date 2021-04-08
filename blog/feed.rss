@@ -1,2 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>NORISOFT diary</title><link>https://ympbyc.github.io/shortblog/blog/index.html</link><copyright>Copyright (c) norimixer</copyright><lastBuildDate>Fri, 19 Mar 2021 23:18:57 +0900</lastBuildDate><generator>shortblog https://github.com/ympbyc/shortblog</generator><item><title>watched kids in the morning while S is away for yoga class </title><pubDate>Mon, 01 Mar 2021 20:21:36 +0900</pubDate></item><item><title>bike to Jinryo and joind kids running club as a staff </title><pubDate>Mon, 01 Mar 2021 20:22:26 +0900</pubDate></item><item><title>tommorow we go check out the route up the elephant mountain </title><pubDate>Mon, 01 Mar 2021 21:35:19 +0900</pubDate></item><item><title>emailed greenvalley hayashi-kun to look for a house in Kamibun </title><pubDate>Mon, 01 Mar 2021 22:24:01 +0900</pubDate></item><item><title>discovered ukon to be a great sedative for my body </title><pubDate>Fri, 05 Mar 2021 22:49:09 +0900</pubDate></item><item><title>watched kids in the morning. </title><pubDate>Mon, 08 Mar 2021 19:39:26 +0900</pubDate></item><item><title>worked with keita in the afternoon </title><pubDate>Mon, 08 Mar 2021 19:39:39 +0900</pubDate></item><item><title>IN: 5000 from Keita </title><pubDate>Mon, 08 Mar 2021 19:40:16 +0900</pubDate></item><item><title>built new miniblog core </title><pubDate>Mon, 08 Mar 2021 19:42:21 +0900</pubDate></item><item><title>test test test </title><pubDate>Mon, 08 Mar 2021 19:47:03 +0900</pubDate></item><item><title>TEST from home dir using alias </title><pubDate>Mon, 08 Mar 2021 19:52:56 +0900</pubDate></item><item><title>Hello </title><pubDate>Mon, 08 Mar 2021 20:19:38 +0900</pubDate></item><item><title>IDEA: 輪輪発明事務所　自転車関連の発明品や図面の販売 </title><pubDate>Mon, 08 Mar 2021 20:54:59 +0900</pubDate></item><item><title>禅の公案　無とはなにかを間断なく考え続ける </title><pubDate>Mon, 08 Mar 2021 20:56:14 +0900</pubDate></item><item><title>みっきーにうこんをプレゼントした。けいたくんが野菜をくれた。 </title><pubDate>Mon, 08 Mar 2021 20:56:48 +0900</pubDate></item><item><title>TODO: ベノワのbluetooth問題 </title><pubDate>Mon, 08 Mar 2021 20:58:17 +0900</pubDate></item><item><title>I have to find my way back to working with electronics </title><pubDate>Mon, 08 Mar 2021 20:58:55 +0900</pubDate></item><item><title>It's good that I work a little with computer again </title><pubDate>Mon, 08 Mar 2021 21:00:48 +0900</pubDate></item><item><title>net sync ホワイトボード </title><pubDate>Mon, 08 Mar 2021 21:01:13 +0900</pubDate></item><item><title>planted the kaki tree Keita and I dag yesterday in the garden </title><pubDate>Tue, 09 Mar 2021 08:34:34 +0900</pubDate></item><item><title>FILE: IMGP0033.JPG </title><pubDate>Tue, 09 Mar 2021 08:41:11 +0900</pubDate></item><item><title>FILE: IMGP0034.JPG </title><pubDate>Tue, 09 Mar 2021 08:41:13 +0900</pubDate></item><item><title>went to hatakeno-hi to borrow car from satoco </title><pubDate>Wed, 10 Mar 2021 18:28:18 +0900</pubDate></item><item><title>FILE: IMGP0001.JPG </title><pubDate>Wed, 10 Mar 2021 18:30:10 +0900</pubDate></item><item><title>FILE: IMGP0002.JPG </title><pubDate>Wed, 10 Mar 2021 18:30:10 +0900</pubDate></item><item><title>FILE: IMGP0003.JPG </title><pubDate>Wed, 10 Mar 2021 18:30:11 +0900</pubDate></item><item><title>FILE: IMGP0004.JPG </title><pubDate>Wed, 10 Mar 2021 18:30:11 +0900</pubDate></item><item><title>drove to Konan-Pro to get materials for solar wall! </title><pubDate>Wed, 10 Mar 2021 18:33:20 +0900</pubDate></item><item><title>Photos from yesterday:  </title><pubDate>Wed, 10 Mar 2021 18:33:49 +0900</pubDate></item><item><title>FILE: IMGP0035.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0036.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0037.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0038.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0039.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0040.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0041.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:58 +0900</pubDate></item><item><title>FILE: IMGP0042.JPG </title><pubDate>Wed, 10 Mar 2021 18:33:59 +0900</pubDate></item><item><title>SCRIPT: for f in /mnt/DCIM/XXX/*.JPG; do sbcl --core miniblog --eval &quot;(miniblog::add-media \&quot;$f\&quot;)&quot; --quit; done </title><pubDate>Wed, 10 Mar 2021 18:39:40 +0900</pubDate></item><item><title>ordered glassfiber mesh online </title><pubDate>Wed, 10 Mar 2021 18:45:03 +0900</pubDate></item><item><title>SCHEDULE: 3/27 Ono-sakura-nobutai moritsukuri </title><pubDate>Wed, 10 Mar 2021 18:45:49 +0900</pubDate></item><item><title>TODO: draw net-zero-office-plan and send it to Inobe-san </title><pubDate>Wed, 10 Mar 2021 18:46:50 +0900</pubDate></item><item><title>FILE: IMGP0005.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>FILE: IMGP0006.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>FILE: IMGP0007.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>FILE: IMGP0008.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>FILE: IMGP0009.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>FILE: IMGP0010.JPG </title><pubDate>Thu, 11 Mar 2021 22:29:41 +0900</pubDate></item><item><title>went to Naruto with friends to hunt wakame </title><pubDate>Thu, 11 Mar 2021 22:30:36 +0900</pubDate></item><item><title>Bike to Komatsushima and bought 5 packets of ukon. I then went to fishing shop and bought a short telescopic rod+reel. I wanted to go to the harbor to fish but the rain became severe so I biked home. </title><pubDate>Fri, 12 Mar 2021 20:34:56 +0900</pubDate></item><item><title>miniblogのhtml生成機能を作った。WTFPLで90行のhtml-&gt;stringを使った。quasiquoteとunquoteで制御できて単純便利。写真の公開制御なにかうまいこと考えついたらgithub pagesで公開したい。 </title><pubDate>Fri, 12 Mar 2021 22:23:00 +0900</pubDate></item><item><title>FILE: shot-2021-03-12_22-15-14.jpg </title><pubDate>Fri, 12 Mar 2021 22:25:40 +0900</pubDate></item><item><title>FILE: IMGP0011.JPG </title><pubDate>Sun, 14 Mar 2021 08:22:00 +0900</pubDate></item><item><title>昨日夕方Super cubのカウルとミラーを交換。旭風防のショートバイザーを取り付けた。試しに山城まで走る。リアタイヤが減っている。 </title><pubDate>Sun, 14 Mar 2021 08:23:00 +0900</pubDate></item><item><title>cli interface test </title><pubDate>Sun, 14 Mar 2021 20:46:00 +0900</pubDate></item><item><title>朝、家族で鎌田さん家に行く。脱穀したそばの唐箕がけ。お好み焼きを焼いてくれた。2013年の梅酒が美味しい。 </title><pubDate>Sun, 14 Mar 2021 21:50:00 +0900</pubDate></item><item><title>その後、海、天と森林公園へ。ポテレット広場で延々と遊ぶ。 </title><pubDate>Sun, 14 Mar 2021 21:51:00 +0900</pubDate></item><item><title>カメラを落としてきたので一度帰ってからもう一度カブで登って探しに行った。見つかった記念に一枚。 </title><pubDate>Sun, 14 Mar 2021 21:52:00 +0900</pubDate></item><item><title>FILE: IMGP0012.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0013.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0014.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0015.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0016.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0017.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0018.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0019.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0020.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0021.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0022.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0023.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0024.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>FILE: IMGP0025.JPG </title><pubDate>Sun, 14 Mar 2021 21:55:00 +0900</pubDate></item><item><title>Made a CLI interface for miniblog using buildapp. Now I can do `shortblog make-post &quot;blah blah&quot;`, `shortblog add-media &quot;/mnt/DCIM/xxx/yyy.JPG&quot;`, etc. It even outputs help messages when error occures. </title><pubDate>Sun, 14 Mar 2021 22:06:00 +0900</pubDate></item><item><title>TODO: imagemagick thumbnail generation. be sure to strip exif </title><pubDate>Sun, 14 Mar 2021 22:16:00 +0900</pubDate></item><item><title>FILE: IMGP0026.JPG </title><pubDate>Tue, 16 Mar 2021 12:16:00 +0900</pubDate></item><item><title>FILE: IMGP0027.JPG </title><pubDate>Tue, 16 Mar 2021 12:16:00 +0900</pubDate></item><item><title>FILE: IMGP0028.JPG </title><pubDate>Tue, 16 Mar 2021 12:16:00 +0900</pubDate></item><item><title>FILE: IMGP0029.JPG </title><pubDate>Tue, 16 Mar 2021 12:16:00 +0900</pubDate></item><item><title>yesterday sea, sky and me went to mori-no-hi. good time. </title><pubDate>Tue, 16 Mar 2021 12:18:00 +0900</pubDate></item><item><title>I made a solar wall. It works. TODO: put duct fan. place it on the roof. </title><pubDate>Tue, 16 Mar 2021 12:19:00 +0900</pubDate></item><item><title>MAINTENANCE: Changed engine oil for the cub at 286667km. </title><pubDate>Tue, 16 Mar 2021 12:20:00 +0900</pubDate></item><item><title>_shinzennin_ </title><pubDate>Tue, 16 Mar 2021 12:21:00 +0900</pubDate></item><item><title>FILE: IMGP0030.JPG </title><pubDate>Tue, 16 Mar 2021 12:25:00 +0900</pubDate></item><item><title>FILE: IMGP0031.JPG </title><pubDate>Tue, 16 Mar 2021 21:34:00 +0900</pubDate></item><item><title>FILE: IMGP0032.JPG </title><pubDate>Tue, 16 Mar 2021 21:35:00 +0900</pubDate></item><item><title>徳島スーパーカブでリアタイアの交換を依頼。丁寧に見てくれて、チェーンも交換してくれた。今まで悩みの種だった、走行中の周期的な引っかかったような揺れが消失。とても調子が良くなった。自賠責が切れていたので手続きして、2年分登録した。 </title><pubDate>Tue, 16 Mar 2021 21:38:00 +0900</pubDate></item><item><title>バイク修理後小神子海岸に釣りに行った。穴釣り用の竿はチョイ投げに向いていない。チョイ投げ用の竿が欲しい。釣果0匹 </title><pubDate>Tue, 16 Mar 2021 21:39:00 +0900</pubDate></item><item><title>sbcl独自拡張の外部プログラム呼び出しでimagemagickを呼んで、サムネイルを生成するようにした。 </title><pubDate>Tue, 16 Mar 2021 23:30:00 +0900</pubDate></item><item><title>SHORTBLOG now generates index page </title><pubDate>Wed, 17 Mar 2021 11:20:00 +0900</pubDate></item><item><title>I worked a bit too much on SHORTBLOG last night. I couldn't wake up in the morning. I have to limit myself. </title><pubDate>Wed, 17 Mar 2021 11:22:00 +0900</pubDate></item><item><title>HAIKU: 萌え草や古木が煙り豆煮える </title><pubDate>Wed, 17 Mar 2021 12:49:00 +0900</pubDate></item><item><title>HAIKU: 焚火湯で淹れる薄めの熱コーヒー </title><pubDate>Wed, 17 Mar 2021 12:50:00 +0900</pubDate></item><item><title>HAIKU: 母からの荷物は紅茶ときらず揚げ </title><pubDate>Wed, 17 Mar 2021 12:54:00 +0900</pubDate></item><item><title>FILE: IMGP0038-2021-03-17-21:18.JPG </title><pubDate>Wed, 17 Mar 2021 21:18:00 +0900</pubDate></item><item><title>FILE: IMGP0039-2021-03-17-21:19.JPG </title><pubDate>Wed, 17 Mar 2021 21:19:00 +0900</pubDate></item><item><title>FILE: IMGP0040-2021-03-17-21:19.JPG </title><pubDate>Wed, 17 Mar 2021 21:19:00 +0900</pubDate></item><item><title>FILE: IMGP0041-2021-03-17-21:19.JPG </title><pubDate>Wed, 17 Mar 2021 21:19:00 +0900</pubDate></item><item><title>FILE: IMGP0043.JPG </title><pubDate>Wed, 17 Mar 2021 21:02:00 +0900</pubDate></item><item><title>FILE: IMGP0044.JPG </title><pubDate>Wed, 17 Mar 2021 21:02:00 +0900</pubDate></item><item><title>FILE: IMGP0052.JPG </title><pubDate>Wed, 17 Mar 2021 21:03:00 +0900</pubDate></item><item><title>FILE: IMGP0053.JPG </title><pubDate>Wed, 17 Mar 2021 21:03:00 +0900</pubDate></item><item><title>FILE: IMGP0055.JPG </title><pubDate>Wed, 17 Mar 2021 21:03:00 +0900</pubDate></item><item><title>FILE: IMGP0056.JPG </title><pubDate>Wed, 17 Mar 2021 21:04:00 +0900</pubDate></item><item><title>FILE: IMGP0057.JPG </title><pubDate>Wed, 17 Mar 2021 21:04:00 +0900</pubDate></item><item><title>FILE: IMGP0058.JPG </title><pubDate>Wed, 17 Mar 2021 21:04:00 +0900</pubDate></item><item><title>家族で味噌作り。焚き火で豆を炊いて、潰して、米麹と塩を入れて混ぜて、壺に投げつける。いい陽気であった。 </title><pubDate>Wed, 17 Mar 2021 21:06:00 +0900</pubDate></item><item><title>FILE: IMGP0050.JPG </title><pubDate>Wed, 17 Mar 2021 21:07:00 +0900</pubDate></item><item><title>battery -&gt; cub. The battery was dead so I charged it with solar with a deep cycle battery in parallel. Hopefully it recovers. </title><pubDate>Wed, 17 Mar 2021 21:09:00 +0900</pubDate></item><item><title>FILE: IMGP0059-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 00:00:00 +0900</pubDate></item><item><title>FILE: IMGP0060-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 10:26:00 +0900</pubDate></item><item><title>FILE: IMGP0061-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 10:26:00 +0900</pubDate></item><item><title>FILE: IMGP0062-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 10:26:00 +0900</pubDate></item><item><title>FILE: IMGP0063-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 10:26:00 +0900</pubDate></item><item><title>FILE: IMGP0064-2021-03-19-10-26.JPG </title><pubDate>Fri, 19 Mar 2021 10:26:00 +0900</pubDate></item><item><title>3/18 自主保育。焚き火でご飯と味噌汁を炊いていたら隣のおばあさんに苦情を言われる。 </title><pubDate>Fri, 19 Mar 2021 10:27:00 +0900</pubDate></item><item><title>3/18 trail running with kids.  staff: mio, kocchan. loved kocchan's cookies </title><pubDate>Fri, 19 Mar 2021 10:28:00 +0900</pubDate></item><item><title>剪定withけいたin板野y10k </title><pubDate>Thu, 25 Feb 2021 23:27:33 +0900</pubDate></item><item><title>started writing up a mini blog system in CL </title><pubDate>Thu, 25 Feb 2021 23:28:36 +0900</pubDate></item><item><title>上分移住、広野邸山の家計画をsに打ち明けた </title><pubDate>Thu, 25 Feb 2021 23:30:36 +0900</pubDate></item><item><title>went to the library in Itano with fam. bought food on the way home and met mika-san </title><pubDate>Fri, 26 Feb 2021 21:39:52 +0900</pubDate></item><item><title>installed cli audio visualizer </title><pubDate>Fri, 26 Feb 2021 21:40:21 +0900</pubDate></item><item><title>built sbcl core image for miniblog </title><pubDate>Fri, 26 Feb 2021 21:40:42 +0900</pubDate></item></channel></rss>
+<rss version="2.0"><channel><title>NORI-FIX diary</title><lang>ja</lang><link>https://ympbyc.github.io/shortblog/blog/index.html</link><copyright>Copyright (c) norimixer</copyright><lastBuildDate>Fri, 09 Apr 2021 05:37:54 +0900</lastBuildDate><generator>shortblog https://github.com/ympbyc/shortblog</generator><item><title>2021-04-08</title><description>(SCHEDULE: 月曜日16時よりcna-sanと映話。退職について。 @2021-04-08 21:34
+ FILE: IMGP0053-2021-04-08-21-15.JPG @2021-04-08 21:15
+ 夜飯(実)→蓮根と玉ねぎの梅酢サラダ(蓮根は梅酢と水で少し煮る)、冷奴、白飯、ハゲみりん干しとサヨリ焼き魚。天は色々食べたが最後にさよりの頭を食べて吐いた。あとから蓮根梅酢煮汁でおかゆをして少し食べた。 @2021-04-08 21:12
+ 10時頃神山整体に電話。3時から予約。2時半にカブで出発。聞いたこと→左側の脊柱起立筋が緊張している。全身に緊張が溜まっている。頚椎2番の左が下に落ちていた。左骨盤が内に締まっていた。活元運動をすると良い。感じたこと→優しく色々な箇所を押したり引いたり揺らしたりしてもらううちに、緩んでいく感じがあった。両額に手をかざした時、左の三叉神経痛に悩まされている部位がジワーッと感応していた。 @2021-04-08 21:08
+ 智、鳴門へ大谷焼を買いに。大皿、茶碗、魚皿、湯呑み、匙など買ってきた。実は朝寝。 @2021-04-08 20:56
+ PRIVATE: _shinzennin_ @2021-04-08 09:14)</description><pubDate>Thu, 08 Apr 2021 21:34:00 +0900</pubDate></item><item><title>2021-04-07</title><description>(FARM: Planted pumpkin seeds in the second garden. Maybe it's better to let it sprout in a pot.  The seeds are from pumpkins we ate last year. Dried and stored in a shade but w/ no cover. @2021-04-07 20:23
+ Went to look at the earthbag dome building process. Then shopping, then to Seibu park, then to curry. @2021-04-07 20:04
+ FILE: IMGP0049-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0047-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0046-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0044-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0042-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0041-2021-04-07-20-02.JPG @2021-04-07 20:02
+ FILE: IMGP0036-2021-04-07-20-01.JPG @2021-04-07 20:01
+ FILE: IMGP0034-2021-04-07-20-01.JPG @2021-04-07 20:01)</description><pubDate>Wed, 07 Apr 2021 20:23:00 +0900</pubDate></item><item><title>2021-04-06</title><description>(イーガン『しあわせの理由』表題作がまるで自分のことのようだった。 @2021-04-06 21:19
+ ホウボウの干物がふっくらしていてめちゃ旨い。 @2021-04-06 21:15 マグネシウム粒届いた。 @2021-04-06 21:14
+ 昼、智、海帰宅。私は寝る。肩がどうも捻挫というか肉離れ的な状態らしく、安静にしておく必要がある。 @2021-04-06 21:14
+ 午前中、今日も天と留守番。少し遠くまで散歩に行く。帰り道、白線から出たらだめと言うと泣く。何度も。自由にさせてあげたいけど車が走り回る道沿いに住んでいる限り、ちゃんと教えないと。文明が嫌になるのはこういう時。狼や熊に怯えなくていい代わりに殺傷力を持った乗り物つまり戦車に怯えなければいけない。 @2021-04-06 21:12)</description><pubDate>Tue, 06 Apr 2021 21:19:00 +0900</pubDate></item><item><title>2021-04-05</title><description>(洗濯用マグネシウム粒注文した @2021-04-05 21:10
+ 夕方、楽刈り鎌使いづらいと思っていたが、刃を外側に曲げたら良くなった。 @2021-04-05 21:08
+ cnaさんにメールした @2021-04-05 21:06 夜(智)　スパゲッティ、具は昼と同じ。色々な塩味 @2021-04-05 21:04
+ 帰りしな、無人販売のはっさくを買いたかったけど失敗。酒屋でビールと甘酒を買った。 @2021-04-05 21:03
+ 『富士日記』面白い。 @2021-04-05 21:02
+ 自転車でホームセンターへ。登り鎌がおいていない。代わりに頼まれたペンキとアングル、刷毛を買って帰る。途中古墳で休憩。 @2021-04-05 20:51
+ 昼ご飯、マカロニに人参玉ねぎキャベツアンチョビ炒めまぶし、レンズ豆煮豆。@2021-04-05 20:47
+ ２月頃作った滑り台初公開。５年間机として使っていた材をリメイクした。 @2021-04-05 20:47
+ FILE: IMGP0031-2021-04-05-20-46.JPG @2021-04-05 20:46
+ FILE: IMGP0026-2021-04-05-20-46.JPG @2021-04-05 20:46
+ FILE: IMGP0025-2021-04-05-20-46.JPG @2021-04-05 20:46
+ 海は保育所へ。智は耳鼻科へ。天と留守番。小雨散歩。桜の花弁が吹かれて溜まっている。天、保育所に入りたそう。 @2021-04-05 20:44
+ 朝、６次起床。経費精算と勤怠入力。これがほとんど最後かと思うとなんだか切ないような気持ちだった。 @2021-04-05 20:42)</description><pubDate>Mon, 05 Apr 2021 21:10:00 +0900</pubDate></item><item><title>2021-04-04</title><description>(went to onsen and felt so good @2021-04-04 20:21
+ lets halt X when I don't need it @2021-04-04 16:49
+ TODO: communication w/ pilotz @2021-04-04 16:47
+ S saying we have to fix the plan for Kagoshima trip. @2021-04-04 16:47
+ father writing blog about marketing of gardening work online. @2021-04-04 16:46
+ sea wants to play with mayui. she started walking by herself so I followed and gave her a bike ride.  went to hon-no-hiroba with k/m/m. we came to my house later and just let kids play. k said he needs to go home w/ m. sea cried and tells me she wants to play more. @2021-04-04 16:45
+ morning- cut weeds in gardens. put out some garbage @2021-04-04 16:42)</description><pubDate>Sun, 04 Apr 2021 20:21:00 +0900</pubDate></item><item><title>2021-04-03</title><description>(PRIVATE: _shinzennin_ @2021-04-03 14:00)</description><pubDate>Sat, 03 Apr 2021 14:00:00 +0900</pubDate></item><item><title>2021-04-02</title><description>(海がスマーフみたいでなにかにつけやんちゃだった。 @2021-04-02 20:41
+ Sが獲った三角錐の貝が美味しかった。 @2021-04-02 20:36
+ Sの運転で南へ保養に連れて行ってくれた。海の波が砕ける音が聞こえるのは最高。温泉に入ってもストレッチしても左肩と左首が滅茶苦茶重かったが、Sのヨガで直った。後ろで手を組む牛のポーズがよく効く。ちゃんと前を向く事とか、順序とか、呼吸が大事。帰りは車で体が痛かったので一人途中リタイアして電車とバスで帰ってきた。 @2021-04-02 20:25
+ FILE: IMGP0016-2021-04-02-20-17.JPG @2021-04-02 20:17
+ FILE: IMGP0015-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0009-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0007-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0006-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0004-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0001-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0108-2021-04-02-20-16.JPG @2021-04-02 20:16
+ FILE: IMGP0102-2021-04-02-20-15.JPG @2021-04-02 20:15
+ FILE: IMGP0100-2021-04-02-20-15.JPG @2021-04-02 20:15
+ FILE: IMGP0099-2021-04-02-20-15.JPG @2021-04-02 20:15
+ FILE: IMGP0092-2021-04-02-20-15.JPG @2021-04-02 20:15
+ FILE: IMGP0089-2021-04-02-20-17.JPG @2021-04-02 20:17
+ FILE: IMGP0086-2021-04-02-20-15.JPG @2021-04-02 20:15
+ FILE: IMGP0082-2021-04-02-20-14.JPG @2021-04-02 20:14)</description><pubDate>Fri, 02 Apr 2021 20:41:00 +0900</pubDate></item><item><title>2021-03-30</title><description>(watching kids while S goes working. It is nice to work on the little farm while kids play in the school ground right next. trying to die some masks and tenugui with yomogi @2021-03-30 10:35)</description><pubDate>Tue, 30 Mar 2021 10:35:00 +0900</pubDate></item><item><title>2021-03-29</title><description>(PRIVATE: S got me some good quality grass. @2021-03-29 21:26
+ PRIVATE: talked to mai @2021-03-29 21:24
+ The nerves in the left upper part of my body still aches quite a bit. @2021-03-29 21:23
+ Oda fam and Yuki-san came and we held Original Play session with mainly local kids + parents.  I didn't help much in the advertising phase so I took responsibility in mediating between us and the people in charge of the venue. Overall, great time.  @2021-03-29 21:23
+ FILE: IMGP0066-2021-04-02-20-13.JPG @2021-03-29 20:13
+ FILE: IMGP0061-2021-04-02-20-13.JPG @2021-03-29 20:13
+ FILE: IMGP0058-2021-04-02-20-13.JPG @2021-03-29 20:13
+ FILE: IMGP0057-2021-04-02-20-13.JPG @2021-03-29 20:13
+ FILE: IMGP0049-2021-04-02-20-13.JPG @2021-03-29 20:13
+ In the morning potatos from last year covered in ash got planted in the second garden. @2021-03-29 21:14)</description><pubDate>Mon, 29 Mar 2021 21:26:00 +0900</pubDate></item><item><title>2021-03-28</title><description>(PRIVATE: met mio because I needed to. @2021-03-28 21:33)</description><pubDate>Sun, 28 Mar 2021 21:33:00 +0900</pubDate></item><item><title>2021-03-27</title><description>(Went to common to pick up the cub. Met air playing outside by himself. I played with him. He found kiji bird and thinks it's a kujaku.  We made bazooka from bamboo together. @2021-03-27 18:54
+ 昨日の砂利運びの影響で肩と首が痛い。 @2021-03-27 18:52
+ 野舞台一斉清掃+お花見+襖からくり練習。Sは弁当屋に行くので、子供と参加。最初少し掃除して、あとは自由に過ごした。2年ぶりの集まりで海は色んな人と交歓していた。襖からくり練習で、初めて吊り下げを担当した。思っていたより3倍重かった。2回やって、2回目はうまくできた。初めて操作をする人もいて、上手くなっていた。またここに皆で集まれて良かった。Oさんありがとう。 @2021-03-27 18:51
+ FILE: IMGP0039-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0038-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0037-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0036-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0035-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0034-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0033-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0031-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0030-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0027-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0026-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0025-2021-03-27-18-43.JPG @2021-03-27 18:43
+ FILE: IMGP0022-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0021-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0020-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0019-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0018-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0016-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0015-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0014-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0013-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0012-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0011-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0010-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0009-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0008-2021-03-27-18-42.JPG @2021-03-27 18:42
+ FILE: IMGP0006-2021-03-27-18-42.JPG @2021-03-27 18:42)</description><pubDate>Sat, 27 Mar 2021 18:54:00 +0900</pubDate></item><item><title>2021-03-26</title><description>(On the way home Keita shared with me his plan for connecting gardening work and handicapped people. I very much resonate with that idea.  I think that will make many people happy. @2021-03-26 20:34
+ Garden work with Kimisorganics and Mankitsuya.  Carrying the gravel bags was heavy on my back but I enjoyed working with them, earth, dirt, roots, and grass. It was a hot day.  @2021-03-26 20:33
+ FILE: IMGP0146-2021-03-26-20-22.JPG @2021-03-26 20:22
+ FILE: IMGP0145-2021-03-26-20-22.JPG @2021-03-26 20:22
+ FILE: IMGP0142-2021-03-26-20-22.JPG @2021-03-26 20:22
+ FILE: IMGP0141-2021-03-26-20-22.JPG @2021-03-26 20:22
+ FILE: IMGP0140-2021-03-26-20-22.JPG @2021-03-26 20:22
+ FILE: IMGP0138-2021-03-26-20-21.JPG @2021-03-26 20:21
+ FILE: IMGP0137-2021-03-26-20-21.JPG @2021-03-26 20:21
+ FILE: IMGP0134-2021-03-26-20-21.JPG @2021-03-26 20:21)</description><pubDate>Fri, 26 Mar 2021 20:34:00 +0900</pubDate></item><item><title>2021-03-25</title><description>(PRIVATE: トレラン中、祈を抱いているところを見た智が発症、このまま帰ると危険と思い長野家に助けを求め夕食をご馳走になる。 @2021-03-25 22:53
+ トレラン、こりす担当。天は最初元気に、海は帰り道楽しく走れた。 @2021-03-25 22:51
+ 6 breaths/minute 迷走神経 activation @2021-03-25 14:46
+ 疲れたら出てくる左眼周りの顔面痛が治らず、4ヶ月ぶりに耳鼻科に行った。レントゲンを取り、副鼻腔は問題なく神経痛だろうと診断。薬は貰わず。1.5kの窓口負担。鼻のことはちょくちょく鼻うがいでもしよう。神経痛は無理をせず休憩するようにしよう. @2021-03-25 14:46
+ PRIVATE: nishibun dinner with mio and kotone. talk about life. saw night sakura. stayed there overnight.  @2021-03-25 14:41
+ 3/24 カブ旅. 鳴門へ。お惣菜屋さんでコッヘルにカレーを入れてもらった。少しだけ釣りをしてみたけど釣れなかった。道の駅第九の里から会社の代表に電話をかけ辞意を伝えた。次の瞬間父からメールが来た。電話をして、その後荷が降りたのかボーっとしてしまった。 @2021-03-25 14:39
+ FILE: IMGP0133-2021-03-25-14-33.JPG @2021-03-25 14:33
+ FILE: IMGP0132-2021-03-25-14-33.JPG @2021-03-25 14:33
+ FILE: IMGP0128-2021-03-25-14-33.JPG @2021-03-25 14:33
+ FILE: IMGP0127-2021-03-25-14-33.JPG @2021-03-25 14:33
+ FILE: IMGP0125-2021-03-25-14-33.JPG @2021-03-25 14:33
+ FILE: IMGP0124-2021-03-25-14-32.JPG @2021-03-25 14:32
+ FILE: IMGP0122-2021-03-25-14-32.JPG @2021-03-25 14:32)</description><pubDate>Thu, 25 Mar 2021 22:53:00 +0900</pubDate></item><item><title>2021-03-23</title><description>(呉服店で和手拭いを２枚買った。白に紺の柄入り。よもぎ染めしてみたい。 @2021-03-23 23:22
+ HIGHLIGHT: (海)ビー玉がなかったのでどんぐりと梅干しの種を丸く削って遊んだ。削っていたら、もっとなにか作りたくなって、前から作ろうと思っていたドミノ倒し用の牌を作った。杉の桟木なので柔らかすぎるし目も詰まっていないし軽すぎるけど、加工は簡単。ノミで杢目に沿って上手にパキパキ割って、紙やすりでツルツルにしていた。完璧なものよりも今遊びたいけどないから作っちゃおうというのが大事。 @2021-03-23 23:10
+ (天)アンパンマン号で散歩。その後保育所に歩いていって、入りたそうにしていた。そしてまたアンパンマン号で川の向こうの商店まで行って帰ってきた。はっさくを買って２個食べた。近所のおばあちゃんと久しぶりに喋った。 @2021-03-23 23:03
+ FILE: IMGP0120-2021-03-23-22-56.JPG @2021-03-23 22:56
+ FILE: IMGP0117-2021-03-23-22-55.JPG @2021-03-23 22:55
+ stayed home with sky. Went out many times. Sun is warm. Met many grandmas @2021-03-23 12:43
+ 3/22 went to the park with sky, sea @2021-03-23 12:42
+ 3/22 trail running @2021-03-23 12:41
+ FILE: IMGP0098-2021-03-23-12-01.JPG @2021-03-23 12:01
+ FILE: IMGP0088-2021-03-23-12-01.JPG @2021-03-23 12:01
+ FILE: IMGP0083-2021-03-23-12-00.JPG @2021-03-23 12:00
+ FILE: IMGP0081-2021-03-23-12-00.JPG @2021-03-23 12:00
+ FILE: IMGP0071-2021-03-23-11-59.JPG @2021-03-23 11:59
+ FILE: IMGP0073-2021-03-23-11-59.JPG @2021-03-23 11:59
+ FILE: IMGP0074-2021-03-23-11-58.JPG @2021-03-23 11:58
+ FILE: IMGP0070-2021-03-23-11-55.JPG @2021-03-23 11:55)</description><pubDate>Tue, 23 Mar 2021 23:22:00 +0900</pubDate></item><item><title>2021-03-21</title><description>(Finally emailed Benoit. @2021-03-21 15:18
+ listening to bbc crowdscience @2021-03-21 15:17
+ went to monostock and bought a wooden box to put on the back of the cub @2021-03-21 13:29)</description><pubDate>Sun, 21 Mar 2021 15:18:00 +0900</pubDate></item><item><title>2021-03-20</title><description>(went for a little walk and found a nice tree to climb @2021-03-20 16:22
+ FILE: IMGP0069-2021-03-20-16-22.JPG @2021-03-20 16:22
+ FILE: IMGP0068-2021-03-20-16-22.JPG @2021-03-20 16:22
+ FILE: IMGP0067-2021-03-20-16-22.JPG @2021-03-20 16:22
+ DEV(shortblog): style a little bit @2021-03-20 12:08
+ FILE: Screen Shot 2021-03-20 at 12.06.50-2021-03-20-12-08.png @2021-03-20 12:08
+ DEV(shortblog): make html structure better @2021-03-20 12:05)</description><pubDate>Sat, 20 Mar 2021 16:22:00 +0900</pubDate></item><item><title>2021-03-19</title><description>(shortblog now generates rss feed but it needs improvement @2021-03-19 23:27
+ PLANTSのチラシを配った。ブッダカフェ、コンプレックス、豆ちよ、改善センター、作良家、丸池商店など @2021-03-19 23:26
+ 3/18 trail running with kids.  staff: mio, kocchan. loved kocchan's cookies @2021-03-19 10:28
+ 3/18 自主保育。焚き火でご飯と味噌汁を炊いていたら隣のおばあさんに苦情を言われる。 @2021-03-19 10:27
+ FILE: IMGP0064-2021-03-19-10-26.JPG @2021-03-19 10:26
+ FILE: IMGP0063-2021-03-19-10-26.JPG @2021-03-19 10:26
+ FILE: IMGP0062-2021-03-19-10-26.JPG @2021-03-19 10:26
+ FILE: IMGP0061-2021-03-19-10-26.JPG @2021-03-19 10:26
+ FILE: IMGP0060-2021-03-19-10-26.JPG @2021-03-19 10:26
+ FILE: IMGP0059-2021-03-19-10-26.JPG @2021-03-19 24:00)</description><pubDate>Fri, 19 Mar 2021 23:27:00 +0900</pubDate></item><item><title>2021-03-17</title><description>(battery -&gt; cub. The battery was dead so I charged it with solar with a deep cycle battery in parallel. Hopefully it recovers. @2021-03-17 21:09
+ FILE: IMGP0050.JPG @2021-03-17 21:07
+ 家族で味噌作り。焚き火で豆を炊いて、潰して、米麹と塩を入れて混ぜて、壺に投げつける。いい陽気であった。 @2021-03-17 21:06
+ FILE: IMGP0058.JPG @2021-03-17 21:04 FILE: IMGP0057.JPG @2021-03-17 21:04
+ FILE: IMGP0056.JPG @2021-03-17 21:04 FILE: IMGP0055.JPG @2021-03-17 21:03
+ FILE: IMGP0053.JPG @2021-03-17 21:03 FILE: IMGP0052.JPG @2021-03-17 21:03
+ FILE: IMGP0044.JPG @2021-03-17 21:02 FILE: IMGP0043.JPG @2021-03-17 21:02
+ FILE: IMGP0041-2021-03-17-21:19.JPG @2021-03-17 21:19
+ FILE: IMGP0040-2021-03-17-21:19.JPG @2021-03-17 21:19
+ FILE: IMGP0039-2021-03-17-21:19.JPG @2021-03-17 21:19
+ FILE: IMGP0038-2021-03-17-21:18.JPG @2021-03-17 21:18
+ HAIKU: 母からの荷物は紅茶ときらず揚げ @2021-03-17 12:54
+ HAIKU: 焚火湯で淹れる薄めの熱コーヒー @2021-03-17 12:50
+ HAIKU: 萌え草や古木が煙り豆煮える @2021-03-17 12:49
+ I worked a bit too much on SHORTBLOG last night. I couldn't wake up in the morning. I have to limit myself. @2021-03-17 11:22
+ SHORTBLOG now generates index page @2021-03-17 11:20)</description><pubDate>Wed, 17 Mar 2021 21:09:00 +0900</pubDate></item><item><title>2021-03-16</title><description>(sbcl独自拡張の外部プログラム呼び出しでimagemagickを呼んで、サムネイルを生成するようにした。 @2021-03-16 23:30
+ バイク修理後小神子海岸に釣りに行った。穴釣り用の竿はチョイ投げに向いていない。チョイ投げ用の竿が欲しい。釣果0匹 @2021-03-16 21:39
+ 徳島スーパーカブでリアタイアの交換を依頼。丁寧に見てくれて、チェーンも交換してくれた。今まで悩みの種だった、走行中の周期的な引っかかったような揺れが消失。とても調子が良くなった。自賠責が切れていたので手続きして、2年分登録した。 @2021-03-16 21:38
+ FILE: IMGP0032.JPG @2021-03-16 21:35 FILE: IMGP0031.JPG @2021-03-16 21:34
+ FILE: IMGP0030.JPG @2021-03-16 12:25 _shinzennin_ @2021-03-16 12:21
+ MAINTENANCE: Changed engine oil for the cub at 286667km. @2021-03-16 12:20
+ I made a solar wall. It works. TODO: put duct fan. place it on the roof. @2021-03-16 12:19
+ yesterday sea, sky and me went to mori-no-hi. good time. @2021-03-16 12:18
+ FILE: IMGP0029.JPG @2021-03-16 12:16 FILE: IMGP0028.JPG @2021-03-16 12:16
+ FILE: IMGP0027.JPG @2021-03-16 12:16 FILE: IMGP0026.JPG @2021-03-16 12:16)</description><pubDate>Tue, 16 Mar 2021 23:30:00 +0900</pubDate></item><item><title>2021-03-14</title><description>(TODO: imagemagick thumbnail generation. be sure to strip exif @2021-03-14 22:16
+ Made a CLI interface for miniblog using buildapp. Now I can do `shortblog make-post &quot;blah blah&quot;`, `shortblog add-media &quot;/mnt/DCIM/xxx/yyy.JPG&quot;`, etc. It even outputs help messages when error occures. @2021-03-14 22:06
+ FILE: IMGP0025.JPG @2021-03-14 21:55 FILE: IMGP0024.JPG @2021-03-14 21:55
+ FILE: IMGP0023.JPG @2021-03-14 21:55 FILE: IMGP0022.JPG @2021-03-14 21:55
+ FILE: IMGP0021.JPG @2021-03-14 21:55 FILE: IMGP0020.JPG @2021-03-14 21:55
+ FILE: IMGP0019.JPG @2021-03-14 21:55 FILE: IMGP0018.JPG @2021-03-14 21:55
+ FILE: IMGP0017.JPG @2021-03-14 21:55 FILE: IMGP0016.JPG @2021-03-14 21:55
+ FILE: IMGP0015.JPG @2021-03-14 21:55 FILE: IMGP0014.JPG @2021-03-14 21:55
+ FILE: IMGP0013.JPG @2021-03-14 21:55 FILE: IMGP0012.JPG @2021-03-14 21:55
+ カメラを落としてきたので一度帰ってからもう一度カブで登って探しに行った。見つかった記念に一枚。 @2021-03-14 21:52
+ その後、海、天と森林公園へ。ポテレット広場で延々と遊ぶ。 @2021-03-14 21:51
+ 朝、家族で鎌田さん家に行く。脱穀したそばの唐箕がけ。お好み焼きを焼いてくれた。2013年の梅酒が美味しい。 @2021-03-14 21:50
+ cli interface test @2021-03-14 20:46
+ 昨日夕方Super cubのカウルとミラーを交換。旭風防のショートバイザーを取り付けた。試しに山城まで走る。リアタイヤが減っている。 @2021-03-14 08:23
+ FILE: IMGP0011.JPG @2021-03-14 08:22)</description><pubDate>Sun, 14 Mar 2021 22:16:00 +0900</pubDate></item><item><title>2021-03-12</title><description>(FILE: shot-2021-03-12_22-15-14.jpg @2021-03-12 22:25:40
+ miniblogのhtml生成機能を作った。WTFPLで90行のhtml-&gt;stringを使った。quasiquoteとunquoteで制御できて単純便利。写真の公開制御なにかうまいこと考えついたらgithub pagesで公開したい。 @2021-03-12 22:23
+ Bike to Komatsushima and bought 5 packets of ukon. I then went to fishing shop and bought a short telescopic rod+reel. I wanted to go to the harbor to fish but the rain became severe so I biked home. @2021-03-12 20:34:56)</description><pubDate>Fri, 12 Mar 2021 22:25:40 +0900</pubDate></item><item><title>2021-03-11</title><description>(went to Naruto with friends to hunt wakame @2021-03-11 22:30:36
+ FILE: IMGP0010.JPG @2021-03-11 22:29:41
+ FILE: IMGP0009.JPG @2021-03-11 22:29:41
+ FILE: IMGP0008.JPG @2021-03-11 22:29:41
+ FILE: IMGP0007.JPG @2021-03-11 22:29:41
+ FILE: IMGP0006.JPG @2021-03-11 22:29:41
+ FILE: IMGP0005.JPG @2021-03-11 22:29:41)</description><pubDate>Thu, 11 Mar 2021 22:30:36 +0900</pubDate></item><item><title>2021-03-10</title><description>(TODO: draw net-zero-office-plan and send it to Inobe-san @2021-03-10 18:46:50
+ SCHEDULE: 3/27 Ono-sakura-nobutai moritsukuri @2021-03-10 18:45:49
+ ordered glassfiber mesh online @2021-03-10 18:45:03
+ SCRIPT: for f in /mnt/DCIM/XXX/*.JPG; do sbcl --core miniblog --eval &quot;(miniblog::add-media \&quot;$f\&quot;)&quot; --quit; done @2021-03-10 18:39:40
+ FILE: IMGP0042.JPG @2021-03-10 18:33:59
+ FILE: IMGP0041.JPG @2021-03-10 18:33:58
+ FILE: IMGP0040.JPG @2021-03-10 18:33:58
+ FILE: IMGP0039.JPG @2021-03-10 18:33:58
+ FILE: IMGP0038.JPG @2021-03-10 18:33:58
+ FILE: IMGP0037.JPG @2021-03-10 18:33:58
+ FILE: IMGP0036.JPG @2021-03-10 18:33:58
+ FILE: IMGP0035.JPG @2021-03-10 18:33:58
+ Photos from yesterday:  @2021-03-10 18:33:49
+ drove to Konan-Pro to get materials for solar wall! @2021-03-10 18:33:20
+ FILE: IMGP0004.JPG @2021-03-10 18:30:11
+ FILE: IMGP0003.JPG @2021-03-10 18:30:11
+ FILE: IMGP0002.JPG @2021-03-10 18:30:10
+ FILE: IMGP0001.JPG @2021-03-10 18:30:10
+ went to hatakeno-hi to borrow car from satoco @2021-03-10 18:28:18)</description><pubDate>Wed, 10 Mar 2021 18:46:50 +0900</pubDate></item><item><title>2021-03-09</title><description>(FILE: IMGP0034.JPG @2021-03-09 08:41:13
+ FILE: IMGP0033.JPG @2021-03-09 08:41:11
+ planted the kaki tree Keita and I dag yesterday in the garden @2021-03-09 08:34:34)</description><pubDate>Tue, 09 Mar 2021 08:41:13 +0900</pubDate></item><item><title>2021-03-08</title><description>(net sync ホワイトボード @2021-03-08 21:01:13
+ It's good that I work a little with computer again @2021-03-08 21:00:48
+ I have to find my way back to working with electronics @2021-03-08 20:58:55
+ TODO: ベノワのbluetooth問題 @2021-03-08 20:58:17
+ みっきーにうこんをプレゼントした。けいたくんが野菜をくれた。 @2021-03-08 20:56:48
+ 禅の公案　無とはなにかを間断なく考え続ける @2021-03-08 20:56:14
+ IDEA: 輪輪発明事務所　自転車関連の発明品や図面の販売 @2021-03-08 20:54:59 Hello @2021-03-08 20:19:38
+ TEST from home dir using alias @2021-03-08 19:52:56
+ test test test @2021-03-08 19:47:03
+ built new miniblog core @2021-03-08 19:42:21
+ PRIVATE: IN: 5000 from Keita @2021-03-08 19:40:16
+ worked with keita in the afternoon @2021-03-08 19:39:39
+ watched kids in the morning. @2021-03-08 19:39:26)</description><pubDate>Mon, 08 Mar 2021 21:01:13 +0900</pubDate></item><item><title>2021-03-05</title><description>(discovered ukon to be a great sedative for my body @2021-03-05 22:49:9)</description><pubDate>Fri, 05 Mar 2021 22:49:09 +0900</pubDate></item><item><title>2021-03-01</title><description>(emailed greenvalley hayashi-kun to look for a house in Kamibun @2021-03-01 22:24:1
+ tommorow we go check out the route up the elephant mountain @2021-03-01 21:35:19
+ bike to Jinryo and joind kids running club as a staff @2021-03-01 20:22:26
+ watched kids in the morning while S is away for yoga class @2021-03-01 20:21:36)</description><pubDate>Mon, 01 Mar 2021 22:24:01 +0900</pubDate></item><item><title>2021-02-26</title><description>(built sbcl core image for miniblog @2021-02-26 21:40:42
+ installed cli audio visualizer @2021-02-26 21:40:21
+ went to the library in Itano with fam. bought food on the way home and met mika-san @2021-02-26 21:39:52)</description><pubDate>Fri, 26 Feb 2021 21:40:42 +0900</pubDate></item><item><title>2021-02-25</title><description>(上分移住、広野邸山の家計画をsに打ち明けた @2021-02-25 23:30:36
+ started writing up a mini blog system in CL @2021-02-25 23:28:36
+ 剪定withけいたin板野y10k @2021-02-25 23:27:33)</description><pubDate>Thu, 25 Feb 2021 23:30:36 +0900</pubDate></item></channel></rss>

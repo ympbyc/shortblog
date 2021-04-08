@@ -127,7 +127,8 @@ ul {list-style-type:circle}
 .link-top {float:right;padding-right:1.6em}
 .icon {border-radius:50%; width: 60px;height:60px;}
 .profile {padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
-ul.blog-list {margin: 1em 2em}")))
+ul.blog-list {margin: 1em 2em}
+.body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}")))
 
 
 (defmacro match-0 (s-t-s)
@@ -144,36 +145,39 @@ ul.blog-list {margin: 1em 2em}")))
 	 `(b () ,(subseq text 10)))
 	(t text)))
 
+
+(defmacro collect-articles (in-txt make-article)
+  `(let ((date "")
+	 (posts/day ())
+	 (xs ()))
+     (loop for line = (read-line ,in-txt nil nil)
+	while line
+	for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
+	do (if (string/= day date)
+	       (progn
+		 (if posts/day (push ,make-article xs))
+		 (setq date day)
+		 (setq posts/day (list line)))
+	       (push line posts/day)))
+     (push ,make-article xs)
+     xs))
+
 (defun build-articles (in-txt)
-  (let ((date "")
-	(posts/day '())
-	(html '()))
-    (macrolet ((make-article ()
-		 `(push
-		   `(article ()
-			     (h2 () ,date)
-			     ,@(loop for post in posts/day
-				  collect (cond
-					    ((string= "FILE:" (subseq post 0 5))
-					     `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320
-							alt ,date)))
-					    ((string= "PRIVATE:" (subseq post 0 8))
-					     `())
-					    (t `(p ()
-						   ,(let ((x (scan-group "(.*)@.*\ (.*)$" post)))
-						      `(,(make-style (aref x 0)) (span (class "time") ,(aref x 1)))))))))
-		   html)))
-      (loop for line = (read-line in-txt nil nil)
-	 while line
-	 for day = (subseq (ppcre:scan-to-strings "\@([^\ ]+)" line) 1)
-	 do (if (string/= day date)
-		(progn
-		  (if posts/day (make-article))
-		  (setq date day)
-		  (setq posts/day (list line)))
-		(push line posts/day)))
-      (make-article))
-    html))
+  (collect-articles in-txt
+		    `(article ()
+			      (h2 () ,date)
+			      ,@(loop for post in posts/day
+				   collect (cond
+					     ((string= "FILE:" (subseq post 0 5))
+					      `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320
+							 alt ,date)))
+					     ((string= "PRIVATE:" (subseq post 0 8))
+					      `())
+					     (t `(p ()
+						    ,(let ((x (scan-group "(.*)@.*\ (.*)$" post)))
+						       `(,(make-style (aref x 0)) (span (class "time") ,(aref x 1)))))))))))
+
+
 
 
 (defun build-html (dir text-txt blog-html)
@@ -195,6 +199,27 @@ ul.blog-list {margin: 1em 2em}")))
 				   (a (href "../index.html") "->INDEX"))))
 		     out)))))
 
+(defun build-index ()
+  (with-open-file (out (format nil "~a/index.html" (blog-rel-path "blog"))
+		       :direction :output
+		       :if-exists :supersede
+		       :if-does-not-exist :create)
+    (println "<!doctype html>" out)
+    (println (html:html->string
+	      `(html (lang "ja")
+		     ,(html-head (format nil "~a index" *blog-title*))
+		     (body (class "body-compact") (h1 (),*blog-title*)
+			   (p (class "profile")
+			      (img (class "icon"
+				    src "profile.jpg"
+				    alt "profile picture of the author"))
+			      (br ()) ,*blog-description*)
+			   (ul (class "blog-list")
+			       ,(loop for dir in (blogs-across-months)
+				   for blog = (format nil "~a/index.html" (pathname-month dir))
+				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))
+	     out)))
+
 (defun save-html (&key force)
   (generate-thumbnails)
   (loop for dir in (blogs-across-months)
@@ -209,21 +234,7 @@ ul.blog-list {margin: 1em 2em}")))
 		   (< (uiop:safe-file-write-date blog-html)
 		      (uiop:safe-file-write-date text-txt))))
      do (build-html dir text-txt blog-html))
-  (with-open-file (out (format nil "~a/index.html" (blog-rel-path "blog"))
-		       :direction :output
-		       :if-exists :supersede
-		       :if-does-not-exist :create)
-    (println "<!doctype html>" out)
-    (println (html:html->string
-	      `(html (lang "ja")
-		     ,(html-head (format nil "~a index" *blog-title*))
-		     (body () (h1 (),*blog-title*)
-			   (p (class "profile") (img (class "icon" src "profile.jpg" alt "profile picture of the author")) (br ()) ,*blog-description*)
-			   (ul (class "blog-list")
-			       ,(loop for dir in (blogs-across-months)
-				   for blog = (format nil "~a/index.html" (pathname-month dir))
-				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))
-	     out)))
+  (build-index))
 
 (defparameter days '("Mon" "Tue" "Wed" "Thu" "Fri" "Sat" "Sun"))
 (defparameter months '("Dec" "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"))
@@ -253,19 +264,19 @@ ul.blog-list {margin: 1em 2em}")))
 	      `(rss (version "2.0")
 		    (channel ()
 			     (title () ,*blog-title*)
-			     (lang ,*language*)
+			     (lang () ,*language*)
 			     (|link| () ,(format nil "~aindex.html" *public-root-url*))
 			     (copyright () ,(format nil "Copyright (c) ~a" *author-name*))
 			     (|lastBuildDate| () ,(rfc822-date (get-universal-time)))
 			     (generator () "shortblog https://github.com/ympbyc/shortblog")
 			     ,@(loop for dir in (blogs-across-months)
-				 for text-txt   = (format nil "~atext.txt" dir)
+				  for text-txt   = (format nil "~atext.txt" dir)
 				  collect (with-open-file (in text-txt)
-					    (loop for line = (read-line in nil nil)
-					       while line
-					       collect `(item ()
-							      (title () ,(scan-to-strings "[^@]+" line))
-							      (|pubDate| () ,(rfc822-date (post-date line))))))))))
+					    (collect-articles
+					     in `(item ()
+						       (title () ,date)
+						       (description () ,(format nil "~a" posts/day))
+						       (|pubDate| () ,(rfc822-date (post-date (car posts/day)))))))))))
 	     out)))
 
 
