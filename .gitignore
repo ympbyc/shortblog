@@ -10,3 +10,4 @@ miniblog
 miniblog.core
 build-core.lisp
 publish
+text.txt
