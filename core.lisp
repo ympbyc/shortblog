@@ -113,6 +113,7 @@
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (meta (name "description" content ,*blog-description*))
+	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
 	 (style () "
 body{background: rgb(236,235,230)}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
@@ -126,7 +127,7 @@ article .time{color:#c3c3c3;font-size:0.7em; float:right}
 ul {list-style-type:circle}
 .link-top {float:right;padding-right:1.6em}
 .icon {border-radius:50%; width: 60px;height:60px;}
-.profile {padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
+.profile {margin: 1em 0; padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
 ul.blog-list {margin: 1em 2em}
 .body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}")))
 
@@ -162,6 +163,9 @@ ul.blog-list {margin: 1em 2em}
      (push ,make-article xs)
      xs))
 
+(defun private? (post)
+  (string= "PRIVATE:" (subseq post 0 8)))
+
 (defun build-articles (in-txt)
   (collect-articles in-txt
 		    `(article ()
@@ -171,7 +175,7 @@ ul.blog-list {margin: 1em 2em}
 					     ((string= "FILE:" (subseq post 0 5))
 					      `(img (src ,(format nil "thumbs/~a" (post-file-path post)) width 320
 							 alt ,date)))
-					     ((string= "PRIVATE:" (subseq post 0 8))
+					     ((private? post)
 					      `())
 					     (t `(p ()
 						    ,(let ((x (scan-group "(.*)@.*\ (.*)$" post)))
@@ -209,7 +213,8 @@ ul.blog-list {margin: 1em 2em}
 	      `(html (lang "ja")
 		     ,(html-head (format nil "~a index" *blog-title*))
 		     (body (class "body-compact") (h1 (),*blog-title*)
-			   (p (class "profile")
+			   (section (class "profile")
+			      (h2 (style "float:right;margin:0 1em 0 0") "Author")
 			      (img (class "icon"
 				    src "profile.jpg"
 				    alt "profile picture of the author"))
@@ -275,7 +280,8 @@ ul.blog-list {margin: 1em 2em}
 					    (collect-articles
 					     in `(item ()
 						       (title () ,date)
-						       (description () ,(format nil "~a" posts/day))
+						       (description () ,(format nil "~a"
+										(remove-if #'private? posts/day)))
 						       (|pubDate| () ,(rfc822-date (post-date (car posts/day)))))))))))
 	     out)))
 
