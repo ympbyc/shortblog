@@ -1,0 +1,333 @@
+
+
+Thu Apr 15 22:25:47 2021
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-20-generic (#21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       488397168 sectors
+/dev/sda: user_max   488397168 sectors
+/dev/sda: native_max 488397168 sectors
+/dev/sda: dco        488397168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 250 GB / 232 GiB - CHS 30401 255 63, sector size=512 - Hitachi HTS545025B9SA00, S/N:110216PBN2623S0NU6AW, FW:PB2OC64G
+Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62, sector size=512 - Generic- Multi-Card, FW:1.00
+
+Partition table type (auto): Intel
+Disk /dev/sdb - 7744 MB / 7386 MiB - Generic- Multi-Card
+Partition table type: Intel
+
+Analyse Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62
+Geometry from i386 MBR: head=4 sector=16
+BAD_RS LBA=8192 8062
+FAT32 at 0/132/9
+Info: size boot_sector 88262, partition 88262
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 239 (HD)
+sect/track 32 (FAT) != 62 (HD)
+BAD_RS LBA=98304 7586816
+Current partition structure:
+Warning: number of heads/cylinder mismatches 64 (FAT) != 239 (HD)
+Warning: number of sectors per track mismatches 32 (FAT) != 62 (HD)
+ 1 P FAT32 LBA                0 132  9     6 121 44      88262 [boot]
+
+Bad relative sector.
+ 2 P Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+
+Bad relative sector.
+No partition is bootable
+
+search_part()
+Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62
+FAT32 at 0/132/9
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 239 (HD)
+sect/track 32 (FAT) != 62 (HD)
+
+FAT32 at 0/132/9
+     FAT32                    0 132  9     6 121 44      88262 [boot]
+     FAT32, blocksize=512, 45 MB / 43 MiB
+
+recover_EXT2: s_block_group_nr=0/57, s_mnt_count=47/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8096
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 1878528
+recover_EXT2: part_size 15028224
+     Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+Warning: the current number of heads per cylinder is 239 but the correct value may be 255.
+
+Results
+   * FAT32                    0 132  9     6 151 34      90112 [boot]
+     FAT32, blocksize=512, 46 MB / 44 MiB
+   P Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 90112 linear /dev/sdb 8192" | dmsetup create test0
+echo "0 15028224 linear /dev/sdb 98304" | dmsetup create test1
+
+interface_write()
+ 1 P FAT32                    0 132  9     6 151 34      90112 [boot]
+ 2 * Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+You will have to reboot for the change to take effect.
+New geometry
+Disk /dev/sdb - 7746 MB / 7387 MiB - CHS 957 255 62 sector_size=512
+
+Analyse Disk /dev/sdb - 7746 MB / 7387 MiB - CHS 957 255 62
+Geometry from i386 MBR: head=197 sector=34
+FAT32 at 0/132/9
+Info: size boot_sector 88262, partition 90112
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 255 (HD)
+sect/track 32 (FAT) != 62 (HD)
+BAD_RS LBA=98304 104256
+Current partition structure:
+Warning: number of heads/cylinder mismatches 64 (FAT) != 255 (HD)
+Warning: number of sectors per track mismatches 32 (FAT) != 62 (HD)
+ 1 P FAT32                    0 132  9     6  55 34      90112 [boot]
+
+Bad sector count.
+ 2 * Linux                    6  55 35   956 196 16   15028224 [rootfs]
+
+Warning: Bad ending cylinder (CHS and LBA don't match)
+
+search_part()
+Disk /dev/sdb - 7746 MB / 7387 MiB - CHS 957 255 62
+FAT32 at 0/132/9
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 255 (HD)
+sect/track 32 (FAT) != 62 (HD)
+
+FAT32 at 0/132/9
+     FAT32                    0 132  9     6  25 44      88262 [boot]
+     FAT32, blocksize=512, 45 MB / 43 MiB
+
+recover_EXT2: s_block_group_nr=0/57, s_mnt_count=47/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8096
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 1878528
+recover_EXT2: part_size 15028224
+     Linux                    6  55 35   956 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+
+Results
+   * FAT32                    0 132  9     6  55 34      90112 [boot]
+     FAT32, blocksize=512, 46 MB / 44 MiB
+   P Linux                    6  55 35   956 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 90112 linear /dev/sdb 8192" | dmsetup create test0
+echo "0 15028224 linear /dev/sdb 98304" | dmsetup create test1
+
+interface_write()
+ 1 P FAT32                    0 132  9     6  55 34      90112 [boot]
+ 2 * Linux                    6  55 35   956 196 16   15028224 [rootfs]
+
+search_part()
+Disk /dev/sdb - 7746 MB / 7387 MiB - CHS 957 255 62
+FAT32 at 0/132/9
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 255 (HD)
+sect/track 32 (FAT) != 62 (HD)
+
+FAT32 at 0/132/9
+     FAT32                    0 132  9     6  25 44      88262 [boot]
+     FAT32, blocksize=512, 45 MB / 43 MiB
+FAT32 at 0/132/15
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+FAT differs, FAT sectors=672-679/679
+heads/cylinder 64 (FAT) != 255 (HD)
+sect/track 32 (FAT) != 62 (HD)
+
+FAT32 at 0/132/15
+     FAT32                    0 132  9     6  25 44      88262 [pies of suc]
+     FAT32, blocksize=512, 45 MB / 43 MiB
+
+recover_EXT2: s_block_group_nr=0/57, s_mnt_count=47/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8096
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 1878528
+recover_EXT2: part_size 15028224
+     Linux                    6  55 35   956 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+     Linux Swap             586 140  5   599 128  2     204784
+     SWAP2 version 1, pagesize=4096, 104 MB / 99 MiB
+
+Results
+   * FAT32                    0 132  9     6  55 34      90112 [boot]
+     FAT32, blocksize=512, 46 MB / 44 MiB
+     Linux                    6  55 35   956 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+     Linux Swap             586 140  5   599 128 18     204800
+     SWAP2 version 1, pagesize=4096, 104 MB / 100 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 90112 linear /dev/sdb 8192" | dmsetup create test0
+echo "0 15028224 linear /dev/sdb 98304" | dmsetup create test1
+echo "0 204800 linear /dev/sdb 9273344" | dmsetup create test2
+SIGINT detected! TestDisk has been killed.
+
+
+Thu Apr 15 22:33:47 2021
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-20-generic (#21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+User is not root!
+Hard disk list
+
+
+TestDisk exited normally.
+
+
+Thu Apr 15 22:33:49 2021
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-20-generic (#21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       488397168 sectors
+/dev/sda: user_max   488397168 sectors
+/dev/sda: native_max 488397168 sectors
+/dev/sda: dco        488397168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 250 GB / 232 GiB - CHS 30401 255 63, sector size=512 - Hitachi HTS545025B9SA00, S/N:110216PBN2623S0NU6AW, FW:PB2OC64G
+Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62, sector size=512 - Generic- Multi-Card, FW:1.00
+
+Partition table type (auto): Intel
+Disk /dev/sdb - 7744 MB / 7386 MiB - Generic- Multi-Card
+Partition table type: Intel
+
+Analyse Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62
+Geometry from i386 MBR: head=197 sector=34
+FAT32 at 0/132/9
+Info: size boot_sector 88262, partition 90112
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 239 (HD)
+sect/track 32 (FAT) != 62 (HD)
+Current partition structure:
+Warning: number of heads/cylinder mismatches 64 (FAT) != 239 (HD)
+Warning: number of sectors per track mismatches 32 (FAT) != 62 (HD)
+ 1 P FAT32                    0 132  9     6 151 34      90112 [boot]
+ 2 * Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+
+Warning: Bad ending cylinder (CHS and LBA don't match)
+
+search_part()
+Disk /dev/sdb - 7744 MB / 7386 MiB - CHS 1020 239 62
+FAT32 at 0/132/9
+FAT1 : 32-710
+FAT2 : 711-1389
+start_rootdir : 1390 root cluster : 2
+Data : 1390-88261
+sectors : 88262
+cluster_size : 1
+no_of_cluster : 86872 (2 - 86873)
+fat_length 679 calculated 679
+heads/cylinder 64 (FAT) != 239 (HD)
+sect/track 32 (FAT) != 62 (HD)
+
+FAT32 at 0/132/9
+     FAT32                    0 132  9     6 121 44      88262 [boot]
+     FAT32, blocksize=512, 45 MB / 43 MiB
+
+recover_EXT2: s_block_group_nr=0/57, s_mnt_count=47/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8096
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 1878528
+recover_EXT2: part_size 15028224
+     Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+Warning: the current number of heads per cylinder is 239 but the correct value may be 255.
+
+Results
+   * FAT32                    0 132  9     6 151 34      90112 [boot]
+     FAT32, blocksize=512, 46 MB / 44 MiB
+   P Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+     ext4 blocksize=4096 Large_file Sparse_SB, 7694 MB / 7338 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 90112 linear /dev/sdb 8192" | dmsetup create test0
+echo "0 15028224 linear /dev/sdb 98304" | dmsetup create test1
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 E extended                 0  99  7     6 151 34      92160
+ 2 * Linux                    6 151 35  1020 196 16   15028224 [rootfs]
+ 5 L FAT32                    0 132  9     6 151 34      90112 [boot]
+write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+write_all_log_i386: CHS: 0/99/7,lba=6144
+You will have to reboot for the change to take effect.
+
+TestDisk exited normally.
