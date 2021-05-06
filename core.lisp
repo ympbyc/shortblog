@@ -115,7 +115,7 @@
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
 	 (style () "
-body{background: rgb(236,235,230)}
+body{background: rgb(236,235,230); font-family:\"Droid Sans Fallback\"}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
 h2 {font-size: 1.2em; }
 img{max-width:100%} 
