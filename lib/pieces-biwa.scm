@@ -88,7 +88,7 @@
        syms)))
 
 (import-js-symbols window document console BiwaScheme Object
-		   Function JSON Array encodeURI _)
+		   Function JSON Array encodeURI)
 
 ;;destructure js obj (shallow)
 (define-macro (let-js-obj-fields binds obj . body)
@@ -342,16 +342,6 @@
 (define (map-keys fn . objs)
   (apply map (cons fn (map (^ (o) (->l (: Object 'keys o))) objs))))
 
-(define-macro (__ c . calls)
-  (if (null? calls)
-      c
-      `(__ (: _ ',(caar calls) ,c ,@(cdar calls))
-	   ,@(cdr calls))))
-
-;;example
-(comment (__ (vector -3 -2 5 -7 6)
-	     (filter (jlambda (x) (< x 0)))
-	     (map    (jlambda (x) (* x 2)))))
 
 (define-macro (1+ x)
   `(+ ,x 1))
