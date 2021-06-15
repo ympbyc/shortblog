@@ -109,12 +109,14 @@
 				,thumb-name)
 			     :search t :wait t :output out))))))))
 
-(defun html-head (title)
+(defun html-head (title &optional indexp)
   `(head () (meta (charset "utf-8"))
 	 (title () ,title)
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
-	 (style () "
+	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js" type "text/biwascheme")
+				  (:noescape "(load \"../pieces-biwa.scm\") (load \"../../shortblog-addons.scm\")")))
+	 (style () (:noescape "
 body{background: rgb(236,235,230); font-family:\"Droid Sans Fallback\"}
 h1 {font-size: 1.6em; padding-right:1em; background:rgba(230,194,19,0.3); text-align:right}
 h2 {font-size: 1.2em; }
@@ -129,7 +131,7 @@ ul {list-style-type:circle}
 .icon {border-radius:50%; width: 60px;height:60px;}
 .profile {margin: 1em 0; padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
 ul.blog-list {margin: 1em 2em}
-.body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}")))
+.body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}"))))
 
 
 (defmacro match-0 (s-t-s)
@@ -144,6 +146,8 @@ ul.blog-list {margin: 1em 2em}
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
 	 `(b () ,(subseq text 10)))
+	((and (> (length text) 6) (string= "TODO:" (subseq text 0 6)))
+	 `(span (class todo) ,text))
 	(t text)))
 
 
@@ -211,7 +215,7 @@ ul.blog-list {margin: 1em 2em}
     (println "<!doctype html>" out)
     (println (html:html->string
 	      `(html (lang "ja")
-		     ,(html-head (format nil "~a index" *blog-title*))
+		     ,(html-head (format nil "~a index" *blog-title*) t)
 		     (body (class "body-compact") (h1 (),*blog-title*)
 			   (section (class "profile")
 			      (h2 (style "float:right;margin:0 1em 0 0") "Author")
