@@ -147,8 +147,8 @@ ul.blog-list {margin: 1em 2em}
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
 	 `(b () ,(subseq text 10)))
-	((and (> (length text) 6) (string= "TODO:" (subseq text 0 6)))
-	 `(span (class todo) ,text))
+	((and (> (length text) 6) (string= "TODO:" (subseq text 0 5)))
+	 `(span (class "todo") ,text))
 	(t text)))
 
 
