@@ -4,5 +4,5 @@
 		 (h3 "Memo")
 		 (ul ,@(map
 			(lambda (todo)
-			  `(li ,todo))
+			  `(li ,(.. todo 'innerHTML)))
 			(qsel-all ".todo"))))))
