@@ -149,6 +149,8 @@ ul.blog-list {margin: 1em 2em}
 	 `(b () ,(subseq text 10)))
 	((and (> (length text) 6) (string= "TODO:" (subseq text 0 5)))
 	 `(span (class "todo") ,text))
+	((and (> (length text) 10) (string= "SCHEDULE:" (subseq text 0 9)))
+	 `(span (class "schedule") ,text))
 	(t text)))
 
 

@@ -4,4 +4,5 @@
 		 (ul ,@(map
 			(lambda (todo)
 			  `(li ,(.. todo 'innerHTML)))
-			(qsel-all ".todo"))))))
+			(append (qsel-all ".todo")
+				(qsel-all ".schedule")))))))
