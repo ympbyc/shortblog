@@ -193,7 +193,7 @@
   (call/cc
    (lambda (k)
      (timer (^ () (k n)) n)
-     (idle))))
+     (idle #t))))
   
 
 (define-macro (w/js-cont continuation . body)
