@@ -1,4 +1,3 @@
-(set! body (qsel "body"))
 (set! head (qsel "head"))
 
 (import-js-symbols localStorage)
@@ -10,29 +9,32 @@ textarea {width: 90%; height: 2em;}
 button {border-radius: 10%; background: #CC6D0D; color: #fff}
 ")))
 
-(element-insert!
- body
- (element-new `(div
-		 (ul ,@(map
-			(lambda (todo)
-			  `(li ,(.. todo 'innerHTML)))
-			(append (qsel-all ".todo")
-				(qsel-all ".schedule")))))))
+(let ((e (wait-for 2)))
+  (set! body (qsel "body"))
 
-(: body 'insertBefore
-   (element-new `(div (textarea#post-text) (button.btn-post "make-post")))
-   (qsel "article"))
+  (element-insert!
+   body
+   (element-new `(div
+		  (ul ,@(map
+			 (lambda (todo)
+			   `(li ,(.. todo 'innerHTML)))
+			 (append (qsel-all ".todo")
+				 (qsel-all ".schedule")))))))
 
-(defun array-str-pure (str)
-  (if (< (length str) 1) "[]" str))
+  (: body 'insertBefore
+     (element-new `(div (textarea#post-text) (button.btn-post "make-post")))
+     (qsel "article"))
 
-(defun ls-push (item x)
-  (let1 arr (: JSON 'parse
-	       (array-str-pure (: localStorage 'getItem item)))
-	(: arr push x)
-	(: localStorage 'setItem item (: JSON stringify arr))))
+  (defun array-str-pure (str)
+    (if (< (length str) 1) "[]" str))
 
-(let1 e (listen-document-event "click" "btn-post")
-      (ls-push "shortblog_posts"
-	       (.. (qsel "#post-text") 'value))
-      (alert (: localStorage 'getItem "shortblog_posts")))
+  (defun ls-push (item x)
+    (let1 arr (: JSON 'parse
+		 (array-str-pure (: localStorage 'getItem item)))
+	  (: arr push x)
+	  (: localStorage 'setItem item (: JSON stringify arr))))
+
+  (let1 e (listen-document-event "click" "btn-post")
+	(ls-push "shortblog_posts"
+		 (.. (qsel "#post-text") 'value))
+	(alert (: localStorage 'getItem "shortblog_posts"))))
