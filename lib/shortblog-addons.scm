@@ -1,6 +1,6 @@
 (import-js-symbols localStorage)
 
-(let* ((e (wait-for 2))
+(let* ((e (wait-for* 2))
        (head (qsel "head"))
        (body (qsel "body")))
 
