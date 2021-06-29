@@ -25,7 +25,8 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
      (qsel "article"))
 
   (defun (array-str-pure str)
-    (if (< (length str) 1) "[]" str))
+    (if (or (js-null? str)
+	    (< (length str) 1)) "[]" str))
 
   (defun (ls-push item x)
     (let1 arr (: JSON 'parse

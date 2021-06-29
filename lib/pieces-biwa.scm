@@ -192,7 +192,7 @@
 (define (wait-for* n)
   (call/cc
    (lambda (k)
-     (timer (^ () (k n)) n)
+     (timer (^ (_) (k n)) n)
      (idle))))
   
 
