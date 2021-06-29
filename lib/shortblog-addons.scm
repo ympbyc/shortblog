@@ -31,7 +31,7 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
   (define (ls-push item x)
     (let1 arr (: JSON 'parse
 		 (array-str-pure (: localStorage 'getItem item)))
-	  (: arr push x)
+	  (: arr 'push x)
 	  (: localStorage 'setItem item (: JSON stringify arr))))
 
   (let1 e (listen-document-event "click" "btn-post")
