@@ -26,7 +26,7 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
 
   (define (array-str-pure str)
     (if (or (js-null? str)
-	    (< (length str) 1)) "[]" str))
+	    (< (string-length str) 1)) "[]" str))
 
   (define (ls-push item x)
     (let1 arr (: JSON 'parse
