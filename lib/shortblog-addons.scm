@@ -24,10 +24,10 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
      (element-new `(div (textarea#post-text) (button.btn-post "make-post")))
      (qsel "article"))
 
-  (defun array-str-pure (str)
+  (defun (array-str-pure str)
     (if (< (length str) 1) "[]" str))
 
-  (defun ls-push (item x)
+  (defun (ls-push item x)
     (let1 arr (: JSON 'parse
 		 (array-str-pure (: localStorage 'getItem item)))
 	  (: arr push x)
