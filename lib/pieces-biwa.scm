@@ -188,6 +188,12 @@
    (lambda (k)
      (timer (^ () (k)) n)
      (idle))))
+
+(define (wait-for* n)
+  (call/cc
+   (lambda (k)
+     (timer (^ () (k n)) n)
+     (idle))))
   
 
 (define-macro (w/js-cont continuation . body)
