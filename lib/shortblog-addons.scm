@@ -1,16 +1,15 @@
-(set! head (qsel "head"))
-
 (import-js-symbols localStorage)
 
-(element-insert!
- head
- (element-new `(style "
+(let* ((e (wait-for 2))
+       (head (qsel "head"))
+       (body (qsel "body")))
+
+  (element-insert!
+   head
+   (element-new `(style "
 textarea {width: 90%; height: 2em;}
 button {border-radius: 10%; background: #CC6D0D; color: #fff}
 ")))
-
-(let ((e (wait-for 2)))
-  (set! body (qsel "body"))
 
   (element-insert!
    body
