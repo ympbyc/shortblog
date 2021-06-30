@@ -9,12 +9,12 @@
 (in-package :miniblog)
 
 (defparameter *blog-home* "~/Work/miniblog")
-(defparameter *blog-title*  "NORI-FIX diary")
-(defparameter *blog-description* "(nori-fix|ympbyc) I like to fix/remake and use old things.")
+(defparameter *blog-title*  "NORIFIX diary")
+(defparameter *blog-description* "(norifix|ympbyc) I like to fix/remake and use old things.")
 (defparameter *thumbnail-size* "640")
 (defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "6"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
-(defparameter *author-name* "norimixer")
+(defparameter *author-name* "norifix")
 (defparameter *language* "ja")
 
 (defun blog-rel-path (x)
@@ -115,7 +115,7 @@
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
 	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
-	 ,(unless indexp `(script () (:noescape "window.biwa_interpreter = new BiwaScheme.Interpreter()")))
+	 ,(unless indexp `(script (src "../lib/biwa_repl.js")))
 	 ,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") (load \"../../lib/shortblog-addons.scm\")")))
 	 (style () (:noescape "
 body{background: rgb(236,235,230); font-family:\"Droid Sans Fallback\"}
