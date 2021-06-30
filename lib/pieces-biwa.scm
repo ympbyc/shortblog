@@ -274,10 +274,10 @@
 (define (listen-document-event event class)
   (call/cc
    (lambda (k)
-     (add-handler! document event
-                   (lambda (e)
-                     (when (member class (vec->lis (.. e 'target 'classList)))
-                           (k e))))
+     (: document 'addEventListener event
+	(js-close (lambda (e)
+	   (when (member class (vec->lis (.. e 'target 'classList)))
+		 (k e)))))
      (idle))
    'listen-document-event))
 
@@ -356,7 +356,7 @@
 
 (define (parse-json str)
   (if (falsy? str) "{}"
-      (: JSON parse str)))
+      (: JSON 'parse str)))
 
 
 (define-macro (truthy? x)

@@ -115,7 +115,7 @@
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
 	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
-	 ,(unless indexp `(script (src "../lib/biwa_repl.js")))
+	 ,(unless indexp `(script (src "../../lib/biwa_repl.js")))
 	 ,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") (load \"../../lib/shortblog-addons.scm\")")))
 	 (style () (:noescape "
 body{background: rgb(236,235,230); font-family:\"Droid Sans Fallback\"}

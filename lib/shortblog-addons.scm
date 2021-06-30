@@ -1,13 +1,13 @@
-(import-js-symbols localStorage)
+(import-js-symbols localStorage Date)
 
-(let* ((e (wait-for* 2))
+(let* ((e (wait-for* 1))
        (head (qsel "head"))
        (body (qsel "body")))
 
   (element-insert!
    head
    (element-new `(style "
-textarea {width: 90%; height: 2em;}
+textarea {width: 90%; height: 1em;}
 button {border-radius: 10%; background: #CC6D0D; color: #fff}
 ")))
 
@@ -21,7 +21,7 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
 				 (qsel-all ".schedule")))))))
 
   (: body 'insertBefore
-     (element-new `(div (textarea#post-text) (button.btn-post "make-post")))
+     (element-new `(div (textarea.post-text)))
      (qsel "article"))
 
   (define (array-str-pure str)
@@ -34,7 +34,15 @@ button {border-radius: 10%; background: #CC6D0D; color: #fff}
 	  (: arr 'push x)
 	  (: localStorage 'setItem item (: JSON 'stringify arr))))
 
-  (let1 e (listen-document-event "click" "btn-post")
-	(ls-push "shortblog_posts"
-		 (.. (qsel "#post-text") 'value))
-	(alert (: localStorage 'getItem "shortblog_posts"))))
+  (define (date-str-now)
+    (let1 d (js-new Date)
+	  (format "~a-~a-~a ~a:~a" (date-year d) (date-month d) (date-day d) (date-hour d) (date-minute d))))
+
+  (let1 e (listen-document-event "keyup" "post-text")
+	(when (= 13 (.. e 'keyCode))
+	      (ls-push "shortblog_posts"
+		       (list->js-array (list (.. e 'target 'value) (date-str-now))))
+	      (alert (map vec->lis (vec->lis (parse-json (: localStorage 'getItem "shortblog_posts")))))
+	      (js-set! (.. e 'target) "value" "")))
+
+  )
