@@ -133,7 +133,7 @@ ul {list-style-type:circle}
 .profile {margin: 1em 0; padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
 ul.blog-list {margin: 1em 2em}
 .body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}
-.opaque {opacity: 0.3}"))))
+.opaque {opacity: 0.1}"))))
 
 
 (defmacro match-0 (s-t-s)
@@ -145,11 +145,14 @@ ul.blog-list {margin: 1em 2em}
 (defun post-file-path (post)
   (match-0 (ppcre:scan-to-strings "FILE:\ ([^\@]+)" post)))
 
+(defun corrupt-text (str)
+  (format nil "~{~A~}" (loop for x across str collect (if (< (random 10) 4) " " x))))
+
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
 	 `(b () ,(subseq text 10)))
 	((and (> (length text) 8) (string= "OPAQUE:" (subseq text 0 7)))
-	 `(span (class "opaque") ,(subseq text 7)))
+	 `(span (class "opaque") ,(corrupt-text (subseq text 7))))
 	((and (> (length text) 6) (string= "TODO:" (subseq text 0 5)))
 	 `(span (class "todo") ,text))
 	((and (> (length text) 10) (string= "SCHEDULE:" (subseq text 0 9)))
