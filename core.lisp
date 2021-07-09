@@ -146,7 +146,8 @@ ul.blog-list {margin: 1em 2em}
   (match-0 (ppcre:scan-to-strings "FILE:\ ([^\@]+)" post)))
 
 (defun corrupt-text (str)
-  (format nil "~{~A~}" (loop for x across str collect (if (< (random 10) 4) " " x))))
+  (let ((state (make-random-state t)))
+    (format nil "~{~A~}" (loop for x across str collect (if (< (random 10 state) 4) " " x)))))
 
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
