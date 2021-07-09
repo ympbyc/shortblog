@@ -147,7 +147,7 @@ ul.blog-list {margin: 1em 2em}
 
 (defun corrupt-text (str)
   (let ((state (make-random-state t)))
-    (format nil "~{~A~}" (loop for x across str collect (if (< (random 10 state) 4) " " x)))))
+    (format nil "~{~A~}" (loop for x across str collect (if (< (random 10 state) 4) "&nbsp;" x)))))
 
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
