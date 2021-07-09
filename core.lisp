@@ -132,7 +132,8 @@ ul {list-style-type:circle}
 .icon {border-radius:50%; width: 60px;height:60px;}
 .profile {margin: 1em 0; padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
 ul.blog-list {margin: 1em 2em}
-.body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}"))))
+.body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}
+.opaque {opacity: 0.3}"))))
 
 
 (defmacro match-0 (s-t-s)
@@ -147,6 +148,8 @@ ul.blog-list {margin: 1em 2em}
 (defun make-style (text)
   (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
 	 `(b () ,(subseq text 10)))
+	((and (> (length text) 8) (string= "OPAQUE:" (subseq text 0 7)))
+	 `(span (class "opaque") ,(subseq text 7)))
 	((and (> (length text) 6) (string= "TODO:" (subseq text 0 5)))
 	 `(span (class "todo") ,text))
 	((and (> (length text) 10) (string= "SCHEDULE:" (subseq text 0 9)))
