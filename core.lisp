@@ -184,8 +184,8 @@ h2>a:hover {text-decoration:underline;}"))))
 
 (defun build-articles (in-txt)
   (collect-articles in-txt
-		    `(article (id ,date)
-			      (h2 () (a (href ,(format nil "#~a" date)) ,date))
+		    `(article (id ,(format nil "d~a" date))
+			      (h2 () (a (href ,(format nil "#d~a" date)) ,date))
 			      ,@(loop for post in posts/day
 				   collect (cond
 					     ((string= "FILE:" (subseq post 0 5))
