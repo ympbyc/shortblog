@@ -9,8 +9,6 @@
    (element-new `(style "
 textarea {width: 90%; height: 1em;}
 button {border-radius: 10%; background: #CC6D0D; color: #fff}
-h2>a {text-decoration: none; color:#7ea0ce}
-h2>a:hover {text-decoration:underline;}
 ")))
 
   (element-insert!

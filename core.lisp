@@ -133,7 +133,9 @@ ul {list-style-type:circle}
 .profile {margin: 1em 0; padding: 1em; width:max-content; overflow:hidden; max-width:100%;box-sizing:border-box}
 ul.blog-list {margin: 1em 2em}
 .body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}
-.opaque {opacity: 0.1}"))))
+.opaque {opacity: 0.1}
+h2>a {text-decoration: none; color:#7ea0ce}
+h2>a:hover {text-decoration:underline;}"))))
 
 
 (defmacro match-0 (s-t-s)
