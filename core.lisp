@@ -182,8 +182,8 @@ ul.blog-list {margin: 1em 2em}
 
 (defun build-articles (in-txt)
   (collect-articles in-txt
-		    `(article ()
-			      (h2 () ,date)
+		    `(article (id ,date)
+			      (h2 () (a (href ,(format nil "#~a" date)) ,date))
 			      ,@(loop for post in posts/day
 				   collect (cond
 					     ((string= "FILE:" (subseq post 0 5))
