@@ -11,8 +11,8 @@
 (defparameter *blog-home* "~/Work/miniblog")
 (defparameter *blog-title*  "NORIFIX diary")
 (defparameter *blog-description* "(norifix|ympbyc) I like to fix/remake and use old things.")
-(defparameter *thumbnail-size* "640")
-(defparameter *blur-faces* '("+noise" "Gaussian" "-noise" "6"))
+(defparameter *thumbnail-param* '("-thumbnail" "640"))
+(defparameter *blur-faces* '("-thumbnail" "320" "+noise" "Gaussian" "-noise" "3"))
 (defparameter *public-root-url* "https://ympbyc.github.io/shortblog/blog/")
 (defparameter *author-name* "norifix")
 (defparameter *language* "ja")
@@ -104,8 +104,8 @@
 			  (with-output-to-string (out)
 			    (sb-ext:run-program
 			     "convert"
-			     `(,(format nil "~a" file) "-thumbnail" ,*thumbnail-size*
-				     ,@(when facep *blur-faces*)
+			     `(,(format nil "~a" file)
+				,@(if facep *blur-faces* *thumbnail-param*)
 				,thumb-name)
 			     :search t :wait t :output out))))))))
 
