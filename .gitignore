@@ -2,7 +2,9 @@
 \#*\*
 .\#*
 blog/*/*.JPG
-
+blog/*
 
 miniblog
 build-core.lisp
+miniblog.core
+publish
