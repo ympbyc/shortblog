@@ -2,7 +2,7 @@
 
 (defpackage :miniblog
   (:use #:CL #:uiop #:ppcre)
-  (:export :make-post :add-media :show-posts :generate-thumbnails :save-html))
+  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html))
 
 (load "lib/html.lisp")
 
@@ -54,6 +54,9 @@
 			 :if-exists :append
 			 :if-does-not-exist :create)
       (format out "~a @~a ~a~%" body (today-str) (time-str)))))
+
+(defun post (body)
+  (make-post body))
 
 (defun add-media (source-path)
   (with-blogdir
@@ -114,6 +117,7 @@
 	 (title () ,title)
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
+	 (link (rel "alternate" type "application/rss+xml" title "RSS" href ,(format "~feed.rss" *public-root-url*)))
 	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
 	 ,(unless indexp `(script (src "../../lib/biwa_repl.js")))
 	 ,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") (load \"../../lib/shortblog-addons.scm\")")))
