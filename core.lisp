@@ -117,7 +117,7 @@
 	 (title () ,title)
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
-	 (link (rel "alternate" type "application/rss+xml" title "RSS" href ,(format "~feed.rss" *public-root-url*)))
+	 (link (rel "alternate" type "application/rss+xml" title "RSS" href ,(format nil "~Afeed.rss" *public-root-url*)))
 	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
 	 ,(unless indexp `(script (src "../../lib/biwa_repl.js")))
 	 ,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") (load \"../../lib/shortblog-addons.scm\")")))
@@ -164,6 +164,8 @@ h2>a:hover {text-decoration:underline;}"))))
 	 `(span (class "todo") ,text))
 	((and (> (length text) 10) (string= "SCHEDULE:" (subseq text 0 9)))
 	 `(span (class "schedule") ,text))
+	((and (> (length text) 10) (string= "NOESCAPE:" (subseq text 0 9)))
+	 `(:noescape ,(subseq text 9)))
 	(t text)))
 
 
