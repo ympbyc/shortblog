@@ -1,4 +1,5 @@
 ;; super tiny blog engine
+;; Minori Yamashita 2021
 
 (defpackage :miniblog
   (:use #:CL #:uiop #:ppcre)
@@ -186,7 +187,10 @@
 						       `(,(make-style (aref x 0)) (span (class "time") ,(aref x 1)))))))))))
 
 
-
+(defun footer ()
+  `(footer () ,(format nil  "~a is powered by " *blog-title*)
+	   (a (href "https://github.com/ympbyc/shortblog") "SHORTBLOG")
+	   " a tiny CLI blog engine"))
 
 (defun build-html (dir text-txt blog-html)
   (println "building html....")
@@ -204,7 +208,8 @@
 				   (h1 () ,title)
 				   (a (href "../index.html" class "link-top") "->INDEX")
 				   ,@(build-articles in)
-				   (a (href "../index.html") "->INDEX"))))
+				   (div () (a (href "../index.html") "->INDEX"))
+				   ,(footer))))
 		     out)))))
 
 (defun build-index ()

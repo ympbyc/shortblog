@@ -1,6 +1,11 @@
 body {
     background: rgb(236,235,230);
     font-family:"Droid Sans Fallback",sans-serif }
+footer {
+    margin: 40px 0 0 0;
+    border-top: 1px solid #e6c213;
+    text-align: center;
+}
 h1 {
     font-size: 1.6em;
     padding-right:1em;
