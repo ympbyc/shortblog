@@ -232,7 +232,7 @@
 	   " a tiny CLI blog engine"))
 
 (defun build-html (dir text-txt blog-html)
-  (println "building html....")
+  (format t "building html ~A.... " (pathname-month dir))
   (let ((title (format nil "~a | ~a" (pathname-month dir) *blog-title*)))
     (with-open-file (in text-txt)
 	  (with-open-file (out blog-html
@@ -281,11 +281,12 @@
      for html-exists = (uiop:file-exists-p blog-html)
      for date = ""
        ;;process new files only
-     when (or force
-	      (not html-exists)
-	      (and html-exists
-		   (< (uiop:safe-file-write-date blog-html)
-		      (uiop:safe-file-write-date text-txt))))
+     when (and (uiop:safe-file-write-date text-txt)
+	       (or force
+		   (not html-exists)
+		   (and html-exists
+			(< (uiop:safe-file-write-date blog-html)
+			   (uiop:safe-file-write-date text-txt)))))
      do (build-html dir text-txt blog-html))
   (build-index))
 
