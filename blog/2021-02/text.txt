@@ -1,6 +1,0 @@
-剪定withけいたin板野y10k @2021-02-25 23:27:33
-started writing up a mini blog system in CL @2021-02-25 23:28:36
-上分移住、広野邸山の家計画をsに打ち明けた @2021-02-25 23:30:36
-went to the library in Itano with fam. bought food on the way home and met mika-san @2021-02-26 21:39:52
-installed cli audio visualizer @2021-02-26 21:40:21
-built sbcl core image for miniblog @2021-02-26 21:40:42
