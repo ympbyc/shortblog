@@ -5,7 +5,7 @@ emailed greenvalley hayashi-kun to look for a house in Kamibun @2021-03-01 22:24
 discovered ukon to be a great sedative for my body @2021-03-05 22:49:9
 watched kids in the morning. @2021-03-08 19:39:26
 worked with keita in the afternoon @2021-03-08 19:39:39
-IN: 5000 from Keita @2021-03-08 19:40:16
+PRIVATE: IN: 5000 from Keita @2021-03-08 19:40:16
 built new miniblog core @2021-03-08 19:42:21
 test test test @2021-03-08 19:47:03
 TEST from home dir using alias @2021-03-08 19:52:56
@@ -85,3 +85,124 @@ FILE: IMGP0032.JPG @2021-03-16 21:35
 徳島スーパーカブでリアタイアの交換を依頼。丁寧に見てくれて、チェーンも交換してくれた。今まで悩みの種だった、走行中の周期的な引っかかったような揺れが消失。とても調子が良くなった。自賠責が切れていたので手続きして、2年分登録した。 @2021-03-16 21:38
 バイク修理後小神子海岸に釣りに行った。穴釣り用の竿はチョイ投げに向いていない。チョイ投げ用の竿が欲しい。釣果0匹 @2021-03-16 21:39
 sbcl独自拡張の外部プログラム呼び出しでimagemagickを呼んで、サムネイルを生成するようにした。 @2021-03-16 23:30
+SHORTBLOG now generates index page @2021-03-17 11:20
+I worked a bit too much on SHORTBLOG last night. I couldn't wake up in the morning. I have to limit myself. @2021-03-17 11:22
+HAIKU: 萌え草や古木が煙り豆煮える @2021-03-17 12:49
+HAIKU: 焚火湯で淹れる薄めの熱コーヒー @2021-03-17 12:50
+HAIKU: 母からの荷物は紅茶ときらず揚げ @2021-03-17 12:54
+FILE: IMGP0038-2021-03-17-21:18.JPG @2021-03-17 21:18
+FILE: IMGP0039-2021-03-17-21:19.JPG @2021-03-17 21:19
+FILE: IMGP0040-2021-03-17-21:19.JPG @2021-03-17 21:19
+FILE: IMGP0041-2021-03-17-21:19.JPG @2021-03-17 21:19
+FILE: IMGP0043.JPG @2021-03-17 21:02
+FILE: IMGP0044.JPG @2021-03-17 21:02
+FILE: IMGP0052.JPG @2021-03-17 21:03
+FILE: IMGP0053.JPG @2021-03-17 21:03
+FILE: IMGP0055.JPG @2021-03-17 21:03
+FILE: IMGP0056.JPG @2021-03-17 21:04
+FILE: IMGP0057.JPG @2021-03-17 21:04
+FILE: IMGP0058.JPG @2021-03-17 21:04
+家族で味噌作り。焚き火で豆を炊いて、潰して、米麹と塩を入れて混ぜて、壺に投げつける。いい陽気であった。 @2021-03-17 21:06
+FILE: IMGP0050.JPG @2021-03-17 21:07
+battery -> cub. The battery was dead so I charged it with solar with a deep cycle battery in parallel. Hopefully it recovers. @2021-03-17 21:09
+FILE: IMGP0059-2021-03-19-10-26.JPG @2021-03-19 24:00
+FILE: IMGP0060-2021-03-19-10-26.JPG @2021-03-19 10:26
+FILE: IMGP0061-2021-03-19-10-26.JPG @2021-03-19 10:26
+FILE: IMGP0062-2021-03-19-10-26.JPG @2021-03-19 10:26
+FILE: IMGP0063-2021-03-19-10-26.JPG @2021-03-19 10:26
+FILE: IMGP0064-2021-03-19-10-26.JPG @2021-03-19 10:26
+3/18 自主保育。焚き火でご飯と味噌汁を炊いていたら隣のおばあさんに苦情を言われる。 @2021-03-19 10:27
+3/18 trail running with kids.  staff: mio, kocchan. loved kocchan's cookies @2021-03-19 10:28
+PLANTSのチラシを配った。ブッダカフェ、コンプレックス、豆ちよ、改善センター、作良家、丸池商店など @2021-03-19 23:26
+shortblog now generates rss feed but it needs improvement @2021-03-19 23:27
+DEV(shortblog): make html structure better @2021-03-20 12:05
+FILE: Screen Shot 2021-03-20 at 12.06.50-2021-03-20-12-08.png @2021-03-20 12:08
+DEV(shortblog): style a little bit @2021-03-20 12:08
+FILE: IMGP0067-2021-03-20-16-22.JPG @2021-03-20 16:22
+FILE: IMGP0068-2021-03-20-16-22.JPG @2021-03-20 16:22
+FILE: IMGP0069-2021-03-20-16-22.JPG @2021-03-20 16:22
+went for a little walk and found a nice tree to climb @2021-03-20 16:22
+went to monostock and bought a wooden box to put on the back of the cub @2021-03-21 13:29
+listening to bbc crowdscience @2021-03-21 15:17
+Finally emailed Benoit. @2021-03-21 15:18
+FILE: IMGP0070-2021-03-23-11-55.JPG @2021-03-23 11:55
+FILE: IMGP0074-2021-03-23-11-58.JPG @2021-03-23 11:58
+FILE: IMGP0073-2021-03-23-11-59.JPG @2021-03-23 11:59
+FILE: IMGP0071-2021-03-23-11-59.JPG @2021-03-23 11:59
+FILE: IMGP0081-2021-03-23-12-00.JPG @2021-03-23 12:00
+FILE: IMGP0083-2021-03-23-12-00.JPG @2021-03-23 12:00
+FILE: IMGP0088-2021-03-23-12-01.JPG @2021-03-23 12:01
+FILE: IMGP0098-2021-03-23-12-01.JPG @2021-03-23 12:01
+3/22 trail running @2021-03-23 12:41
+3/22 went to the park with sky, sea @2021-03-23 12:42
+stayed home with sky. Went out many times. Sun is warm. Met many grandmas @2021-03-23 12:43
+FILE: IMGP0117-2021-03-23-22-55.JPG @2021-03-23 22:55
+FILE: IMGP0120-2021-03-23-22-56.JPG @2021-03-23 22:56
+(天)アンパンマン号で散歩。その後保育所に歩いていって、入りたそうにしていた。そしてまたアンパンマン号で川の向こうの商店まで行って帰ってきた。はっさくを買って２個食べた。近所のおばあちゃんと久しぶりに喋った。 @2021-03-23 23:03
+HIGHLIGHT: (海)ビー玉がなかったのでどんぐりと梅干しの種を丸く削って遊んだ。削っていたら、もっとなにか作りたくなって、前から作ろうと思っていたドミノ倒し用の牌を作った。杉の桟木なので柔らかすぎるし目も詰まっていないし軽すぎるけど、加工は簡単。ノミで杢目に沿って上手にパキパキ割って、紙やすりでツルツルにしていた。完璧なものよりも今遊びたいけどないから作っちゃおうというのが大事。 @2021-03-23 23:10
+呉服店で和手拭いを２枚買った。白に紺の柄入り。よもぎ染めしてみたい。 @2021-03-23 23:22
+FILE: IMGP0122-2021-03-25-14-32.JPG @2021-03-25 14:32
+FILE: IMGP0124-2021-03-25-14-32.JPG @2021-03-25 14:32
+FILE: IMGP0125-2021-03-25-14-33.JPG @2021-03-25 14:33
+FILE: IMGP0127-2021-03-25-14-33.JPG @2021-03-25 14:33
+FILE: IMGP0128-2021-03-25-14-33.JPG @2021-03-25 14:33
+FILE: IMGP0132-2021-03-25-14-33.JPG @2021-03-25 14:33
+FILE: IMGP0133-2021-03-25-14-33.JPG @2021-03-25 14:33
+3/24 カブ旅. 鳴門へ。お惣菜屋さんでコッヘルにカレーを入れてもらった。少しだけ釣りをしてみたけど釣れなかった。道の駅第九の里から会社の代表に電話をかけ辞意を伝えた。次の瞬間父からメールが来た。電話をして、その後荷が降りたのかボーっとしてしまった。 @2021-03-25 14:39
+PRIVATE: nishibun dinner with mio and kotone. talk about life. saw night sakura. stayed there overnight.  @2021-03-25 14:41
+疲れたら出てくる左眼周りの顔面痛が治らず、4ヶ月ぶりに耳鼻科に行った。レントゲンを取り、副鼻腔は問題なく神経痛だろうと診断。薬は貰わず。1.5kの窓口負担。鼻のことはちょくちょく鼻うがいでもしよう。神経痛は無理をせず休憩するようにしよう. @2021-03-25 14:46
+6 breaths/minute 迷走神経 activation @2021-03-25 14:46
+トレラン、こりす担当。天は最初元気に、海は帰り道楽しく走れた。 @2021-03-25 22:51
+PRIVATE: トレラン中、祈を抱いているところを見た智が発症、このまま帰ると危険と思い長野家に助けを求め夕食をご馳走になる。 @2021-03-25 22:53
+FILE: IMGP0134-2021-03-26-20-21.JPG @2021-03-26 20:21
+FILE: IMGP0137-2021-03-26-20-21.JPG @2021-03-26 20:21
+FILE: IMGP0138-2021-03-26-20-21.JPG @2021-03-26 20:21
+FILE: IMGP0140-2021-03-26-20-22.JPG @2021-03-26 20:22
+FILE: IMGP0141-2021-03-26-20-22.JPG @2021-03-26 20:22
+FILE: IMGP0142-2021-03-26-20-22.JPG @2021-03-26 20:22
+FILE: IMGP0145-2021-03-26-20-22.JPG @2021-03-26 20:22
+FILE: IMGP0146-2021-03-26-20-22.JPG @2021-03-26 20:22
+Garden work with Kimisorganics and Mankitsuya.  Carrying the gravel bags was heavy on my back but I enjoyed working with them, earth, dirt, roots, and grass. It was a hot day.  @2021-03-26 20:33
+On the way home Keita shared with me his plan for connecting gardening work and handicapped people. I very much resonate with that idea.  I think that will make many people happy. @2021-03-26 20:34
+FILE: IMGP0006-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0008-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0009-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0010-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0011-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0012-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0013-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0014-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0015-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0016-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0018-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0019-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0020-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0021-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0022-2021-03-27-18-42.JPG @2021-03-27 18:42
+FILE: IMGP0025-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0026-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0027-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0030-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0031-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0033-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0034-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0035-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0036-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0037-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0038-2021-03-27-18-43.JPG @2021-03-27 18:43
+FILE: IMGP0039-2021-03-27-18-43.JPG @2021-03-27 18:43
+野舞台一斉清掃+お花見+襖からくり練習。Sは弁当屋に行くので、子供と参加。最初少し掃除して、あとは自由に過ごした。2年ぶりの集まりで海は色んな人と交歓していた。襖からくり練習で、初めて吊り下げを担当した。思っていたより3倍重かった。2回やって、2回目はうまくできた。初めて操作をする人もいて、上手くなっていた。またここに皆で集まれて良かった。Oさんありがとう。 @2021-03-27 18:51
+昨日の砂利運びの影響で肩と首が痛い。 @2021-03-27 18:52
+Went to common to pick up the cub. Met air playing outside by himself. I played with him. He found kiji bird and thinks it's a kujaku.  We made bazooka from bamboo together. @2021-03-27 18:54
+PRIVATE: met mio because I needed to. @2021-03-28 21:33
+In the morning potatos from last year covered in ash got planted in the second garden. @2021-03-29 21:14
+FILE: IMGP0049-2021-04-02-20-13.JPG @2021-03-29 20:13
+FILE: IMGP0057-2021-04-02-20-13.JPG @2021-03-29 20:13
+FILE: IMGP0058-2021-04-02-20-13.JPG @2021-03-29 20:13
+FILE: IMGP0061-2021-04-02-20-13.JPG @2021-03-29 20:13
+FILE: IMGP0066-2021-04-02-20-13.JPG @2021-03-29 20:13
+Oda fam and Yuki-san came and we held Original Play session with mainly local kids + parents.  I didn't help much in the advertising phase so I took responsibility in mediating between us and the people in charge of the venue. Overall, great time.  @2021-03-29 21:23
+The nerves in the left upper part of my body still aches quite a bit. @2021-03-29 21:23
+PRIVATE: talked to mai @2021-03-29 21:24
+PRIVATE: S got me some good quality grass. @2021-03-29 21:26
+watching kids while S goes working. It is nice to work on the little farm while kids play in the school ground right next. trying to die some masks and tenugui with yomogi @2021-03-30 10:35

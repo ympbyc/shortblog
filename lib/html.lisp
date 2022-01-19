@@ -27,6 +27,15 @@ https://html.spec.whatwg.org/multipage/syntax.html#void-elements")
               (write-string escaped stream)
               (write-char ch stream)))))
 
+(defun all-upper-case-p (str)
+  (reduce #'(lambda (x y) (and x (upper-case-p y))) str :initial-value T))
+
+(defun tag-string (sym)
+  (let ((tag (symbol-name sym)))
+    (if (all-upper-case-p tag)
+	(string-downcase sym)
+	tag)))
+
 (defun html->string (html)
   "The argument should be of the form (tag-name (attr-name attr-val) child1
 child2 ...). Attributes and children are optional.
@@ -81,7 +90,7 @@ only time the second argument may be a string, so :noescape can still be used to
             (check-type tag symbol)
             ;; printf is a child's toy. Honestly, regex might be too!
             (format nil "<~A~:{ ~A=\"~A\"~}~:[/>~;>~A</~A>~]"
-                    (string-downcase tag)
+                    (tag-string tag)
                     (loop for (attr-name attr-val) on attrs by #'cddr
                        collect
                          (list (string-downcase attr-name)
@@ -90,4 +99,4 @@ only time the second argument may be a string, so :noescape can still be used to
                                          (number (write-to-string attr-val))))))
                     (not (member tag *html-void-tags* :test #'string=))
                     (apply #'concatenate 'string (mapcar #'html->string body))
-                    (string-downcase tag))))))))
+                    (tag-string tag))))))))
