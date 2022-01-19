@@ -125,6 +125,10 @@
 	 (link (rel "stylesheet" href ,(format nil "~Astyle.css" *public-root-url*)))))
 
 
+(defmacro if-let (var pred then else)
+  `(let ((,var ,pred))
+     (if ,var ,then ,else)))
+
 (defmacro match-0 (s-t-s)
   `(multiple-value-bind (_ match)
        ,s-t-s
@@ -138,18 +142,53 @@
   (let ((state (make-random-state t)))
     (format nil "~{~A~}" (loop for x across str collect (if (< (random 10 state) 4) " " x)))))
 
+(defun link-url (post)
+  (match-0 (ppcre:scan-to-strings "(http[^ ]+)" post)))
+
+(defun link-rest (post)
+    (match-0 (ppcre:scan-to-strings "http[^ ]+(.*$)" post)))
+
+(defparameter *tags* ())
+
+(defun define-tag (tag effect)
+  (push (cons tag effect) *tags*))
+
+(defun get-tag (tag)
+  (cdr (assoc tag *tags* :test #'string=)))
+
+(defun post-tags (text)
+  (values (mapcar (lambda (str) (subseq str 0 (- (length str) 1)))
+		  (ppcre:all-matches-as-strings "[A-Zあ-んア-ン]+:" text))
+	  (if-let matches (ppcre:all-matches "[A-Zあ-んア-ン]+:" text)
+		  (subseq text (car (last matches)))
+		  text)))
+
+
+(defmacro tag-effect (body)
+  (let ((lmd (gensym))
+	(text (gensym)))
+    `(lambda (,lmd)
+       (lambda (,text)
+	 (let ((__ (funcall ,lmd ,text)))
+	   ,body)))))
+
+(define-tag "HIGHLIGHT" (tag-effect `(b () ,__)))
+(define-tag "OPAQUE" (tag-effect `(code (class "opaque") ,(corrupt-text __))))
+(define-tag "TODO" (tag-effect `(span (class "todo") ,__)))
+(define-tag "SCHEDULE" (tag-effect `(span (class "schedule") ,__)))
+(define-tag "NOESCAPE" (tag-effect `(:noescape ,__)))
+(define-tag "LINK" (tag-effect `(span () (a (href ,(link-url __)) ,(link-rest __)))))
+
 (defun make-style (text)
-  (cond ((and (> (length text) 11) (string= "HIGHLIGHT:" (subseq text 0 10)))
-	 `(b () ,(subseq text 10)))
-	((and (> (length text) 8) (string= "OPAQUE:" (subseq text 0 7)))
-	 `(code (class "opaque") ,(corrupt-text (subseq text 7))))
-	((and (> (length text) 6) (string= "TODO:" (subseq text 0 5)))
-	 `(span (class "todo") ,text))
-	((and (> (length text) 10) (string= "SCHEDULE:" (subseq text 0 9)))
-	 `(span (class "schedule") ,text))
-	((and (> (length text) 10) (string= "NOESCAPE:" (subseq text 0 9)))
-	 `(:noescape ,(subseq text 9)))
-	(t text)))
+  (multiple-value-bind (tags body)
+      (post-tags text)
+    (let ((processor
+	   (reduce (lambda (lmd tag)
+		     (if-let tag-effect (get-tag tag)
+			     (funcall tag-effect lmd)
+			     lmd))
+		   tags :initial-value #'identity)))
+      (funcall processor body))))
 
 
 (defmacro collect-articles (in-txt make-article)
