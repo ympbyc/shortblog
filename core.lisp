@@ -174,10 +174,10 @@
 
 (define-tag "HIGHLIGHT" (tag-effect `(b () ,__)))
 (define-tag "OPAQUE" (tag-effect `(code (class "opaque") ,(corrupt-text __))))
-(define-tag "TODO" (tag-effect `(span (class "todo") ,__)))
-(define-tag "SCHEDULE" (tag-effect `(span (class "schedule") ,__)))
+(define-tag "TODO" (tag-effect `(span (class "todo") "TODO: ",__)))
+(define-tag "SCHEDULE" (tag-effect `(span (class "schedule") "SCHEDULE: ",__)))
 (define-tag "NOESCAPE" (tag-effect `(:noescape ,__)))
-(define-tag "LINK" (tag-effect `(span () (a (href ,(link-url __)) ,(link-rest __)))))
+(define-tag "LINK" (tag-effect `(span () "LINK: "(a (href ,(link-url __)) ,(link-rest __)))))
 
 (defun make-style (text)
   (multiple-value-bind (tags body)
