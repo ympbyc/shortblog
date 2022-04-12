@@ -229,7 +229,7 @@
 (defun footer ()
   `(footer () ,(format nil  "~a is powered by " *blog-title*)
 	   (a (href "https://github.com/ympbyc/shortblog") "SHORTBLOG")
-	   " a tiny CLI blog engine"))
+	   " a tiny CLI blog engine written in Common Lisp."))
 
 (defun build-html (dir text-txt blog-html)
   (format t "building html ~A.... " (pathname-month dir))
