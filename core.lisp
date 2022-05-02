@@ -186,7 +186,9 @@
 	   (reduce (lambda (lmd tag)
 		     (if-let tag-effect (get-tag tag)
 			     (funcall tag-effect lmd)
-			     lmd))
+			     (progn
+			       (setf body (format nil "~A: ~A" tag body))
+			       lmd)))
 		   tags :initial-value #'identity)))
       (funcall processor body))))
 
