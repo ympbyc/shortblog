@@ -369,6 +369,7 @@
 			  (body ()
 				(h1 () ,*blog-title*)
 				(:noescape ,atcl-html)
+				(div () (a (href "../index.html") "->" ,ym))
 				,(footer))))
 		  out))))))
 
