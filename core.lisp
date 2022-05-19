@@ -5,6 +5,9 @@
   (:use #:CL #:uiop #:ppcre)
   (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html))
 
+(require 'plump)
+(require 'clss)
+
 (load "lib/html.lisp")
 
 (in-package :miniblog)
@@ -119,9 +122,9 @@
 	 (meta (name "description" content ,*blog-description*))
 	 (meta (name "viewport" content "width=device-width,initial-scale=1"))
 	 (link (rel "alternate" type "application/rss+xml" title "RSS" href ,(format nil "~Afeed.rss" *public-root-url*)))
-	 ,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
-	 ,(unless indexp `(script (src "../../lib/biwa_repl.js")))
-	 ,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") ;(load \"../../lib/shortblog-addons.scm\")")))
+	 ;,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
+	 ;,(unless indexp `(script (src "../../lib/biwa_repl.js")))
+	 ;,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") ;(load \"../../lib/shortblog-addons.scm\")")))
 	 (link (rel "stylesheet" href ,(format nil "~Astyle.css" *public-root-url*)))))
 
 
@@ -335,6 +338,25 @@
 										(remove-if #'private? posts/day)))
 						       (|pubDate| () ,(rfc822-date (post-date (car posts/day)))))))))))
 	     out)))
+
+(defun share (datestr)
+  (let ((dt (split-string datestr :separator "\-"))
+	(title (format nil "~a | ~a" datestr *blog-title*)))
+    (with-open-file (out (blog-rel-path (format nil "blog/~a-~a/~a.html" (nth 0 dt) (nth 1 dt) (nth 2 dt)))
+			 :direction :output :if-does-not-exist :create :if-exists :supersede)
+      (with-open-file (in (blog-rel-path (format nil "blog/~a-~a/index.html" (nth 0 dt) (nth 1 dt))))
+	(let ((atcl-html (plump:serialize (aref (clss:select (format nil "article#d~a" datestr)
+									    (plump:parse in))
+						0)
+					  nil)))
+	 (println (html:html->string
+		   `(html (lang ,*language*)
+			  ,(html-head title)
+			  (body ()
+				(h1 () ,*blog-title*)
+				(:noescape ,atcl-html)
+				,(footer))))
+		  out))))))
 
 
 (defun function-named (name)
