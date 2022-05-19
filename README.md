@@ -28,6 +28,7 @@ shortblog add-media /mnt/DCIM/xxx/IMGP0000.JPG
 for img in /mnt/DCIM/xxx/*.JPG; do shortblog add-media "$img"; done
 shortblog show-posts | more
 shortblog save-html
+shortblog share 2022-05-06    #create a html for single day (for sharing)
 ```
 
 etc.
