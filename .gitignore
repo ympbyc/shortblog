@@ -2,7 +2,7 @@
 \#*\#
 .\#*
 blog/*/*
-!blog/*/index.html
+!blog/*/*.html
 !blog/*/thumbs/
 
 
