@@ -131,9 +131,6 @@
 	 ,(if image `(meta (property "og:image" content ,(format nil "~A~A" *public-root-url* image))))
 	 
 	 (link (rel "alternate" type "application/rss+xml" title "RSS" href ,(format nil "~Afeed.rss" *public-root-url*)))
-	 ;,(unless indexp `(script (src "../../lib/biwascheme-0.7.2.js")))
-	 ;,(unless indexp `(script (src "../../lib/biwa_repl.js")))
-	 ;,(unless indexp `(script (type "text/biwascheme") (:noescape "(load \"../../lib/pieces-biwa.scm\") ;(load \"../../lib/shortblog-addons.scm\")")))
 	 (link (rel "stylesheet" href ,(format nil "~Astyle.css" *public-root-url*)))))
 
 
@@ -369,6 +366,7 @@
 			  (body ()
 				(h1 () ,*blog-title*)
 				(:noescape ,atcl-html)
+				(div () (a (href "./index.html") "->" ,ym))
 				,(footer))))
 		  out))))))
 
