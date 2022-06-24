@@ -14,11 +14,11 @@ h1 {
 h2 { font-size: 1.2em }
 img { max-width:100% } 
 p  {
-    line-height:1.8em; margin: 1em 0
+    line-height:1.8em; margin: 1em 0;
 }
 * {margin: 0; padding: 0}
 article {border-bottom: 2px solid rgb(230,194,19); margin: 2em 0;padding: 0 1em}
-article>p, article>div, .profile{background:rgba(255,255,255,0.2); padding: 0 1em}
+article>p, article>div, .profile{background:rgba(255,255,255,0.2); padding: 0.6em 1em}
 article ul {
     padding:2em
 }
