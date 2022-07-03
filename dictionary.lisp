@@ -24,14 +24,14 @@
 
 
 (defun dict-make-entry (title description)
-  (with-dict-out out "text.txt"
+  (with-dict-out out "dict.txt"
     (format out "~a ... ~a @~a~%" title description (today-str))))
 
-(defun dict-search (text)
-  (with-dict-in in "text.txt"
+(defun dict-search (regex)
+  (with-dict-in in "dict.txt"
     (loop for line = (read-line in nil nil)
        while line
-       when (ppcre:scan text line)
+       when (ppcre:scan regex line)
        do (format t "~a~%" line))))
 
 (defun dict-attach-media (title source-path)
