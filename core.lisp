@@ -288,7 +288,7 @@
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
 				   collect `(li () (a (href ,blog) ,(pathname-month dir)))))
 			   (section ()
-			    (a (href "../dictionary/text.txt") "Rin-rin Dictionary")))))
+			    (a (href "../dictionary/dict.txt") "Rin-rin Dictionary")))))
 	     out)))
 
 (defun save-html (&key force)
