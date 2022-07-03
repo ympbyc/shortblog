@@ -11,7 +11,7 @@ h1 {
     padding-right:1em;
     background:rgba(230,194,19,0.3);
     text-align:right }
-h2 { font-size: 1.2em }
+h2,h3 { font-size: 1.2em }
 img { max-width:100% } 
 p  {
     line-height:1.8em; margin: 1em 0;
@@ -30,5 +30,5 @@ ul {list-style-type:circle}
 ul.blog-list {margin: 1em 2em}
 .body-compact {width: max-content; max-width:100%; box-sizing:border-box; margin: 0 auto}
 .opaque {opacity: 0.1}
-h2>a {text-decoration: none; color:#7ea0ce}
-h2>a:hover {text-decoration:underline;}
+h2,h3>a {text-decoration: none; color:#7ea0ce}
+h2,h3>a:hover {text-decoration:underline;}

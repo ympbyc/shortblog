@@ -3,7 +3,8 @@
 
 (defpackage :miniblog
   (:use #:CL #:uiop #:ppcre)
-  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html))
+  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html
+	   :dict-make-entry :dict-search :dict-attach-media))
 
 (require 'plump)
 (require 'clss)
@@ -62,13 +63,17 @@
 (defun post (body)
   (make-post body))
 
+(defun media-copy-name (source-path)
+  (let* ((source-path (uiop:ensure-pathname source-path))
+	 (filename    (format nil "~a-~a-~a.~a"
+			      (pathname-name source-path)
+			      (today-str) (regex-replace "[\:\ ]" (time-str) "-")
+			      (pathname-type source-path))))
+    filename))
+
 (defun add-media (source-path)
   (with-blogdir
-    (let ((source-path (uiop:ensure-pathname source-path))
-	  (filename    (format nil "~a-~a-~a.~a"
-			       (pathname-name source-path)
-			       (today-str) (regex-replace "[\:\ ]" (time-str) "-")
-			       (pathname-type source-path))))
+    (let ((filename (media-copy-name source-path)))
       (copy-file
        source-path (format nil "~a~a" blogdir filename))
       (make-post (format nil "FILE: ~a" filename)))))
@@ -224,7 +229,7 @@
 (defun build-articles (in-txt)
   (collect-articles in-txt
 		    `(article (id ,(format nil "d~a" date))
-			      (h2 () (a (href ,(format nil "#d~a" date)) ,date))
+			      (h3 () (a (href ,(format nil "#d~a" date)) ,date))
 			      ,@(loop for post in posts/day
 				   collect (cond
 					     ((string= "FILE:" (subseq post 0 5))
@@ -281,7 +286,9 @@
 			   (ul (class "blog-list")
 			       ,(loop for dir in (blogs-across-months)
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
-				   collect `(li () (a (href ,blog) ,(pathname-month dir))))))))
+				   collect `(li () (a (href ,blog) ,(pathname-month dir)))))
+			   (section ()
+			    (a (href "../dictionary/text.txt") "Rin-rin Dictionary")))))
 	     out)))
 
 (defun save-html (&key force)

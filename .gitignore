@@ -4,7 +4,7 @@
 blog/*/*
 !blog/*/*.html
 !blog/*/thumbs/
-
+!blog/*/*.txt
 
 miniblog
 miniblog.core

@@ -1,10 +1,10 @@
 ;; dictionary generator
-;; generates dictionally
+;; generates dictionary
 ;; Minori Yamashita Dec. 2021
 
 (in-package :miniblog)
 
-(defparameter *dictionary-home* "~/Work/miniblog/dictinary")
+(defparameter *dictionary-home* "~/Work/miniblog/dictionary")
 
 (defmacro with-dict-out (out file &body body)
   `(progn
@@ -23,17 +23,21 @@
        ,@body)))
 
 
-(defun make-dict-entry (title description)
+(defun dict-make-entry (title description)
   (with-dict-out out "text.txt"
-    (format out "~a ... ~a @~a ~a~%" title description (today-str) (time-str))))
+    (format out "~a ... ~a @~a~%" title description (today-str))))
 
 (defun dict-search (text)
   (with-dict-in in "text.txt"
-    (loop for line = (read-line ,in nil nil)
+    (loop for line = (read-line in nil nil)
        while line
        when (ppcre:scan text line)
-       do (format nil "~a~%" line))))
+       do (format t "~a~%" line))))
 
-(defun attach-media (title media-path)
+(defun dict-attach-media (title source-path)
   (with-dict-out out "media.txt"
-    (format out "~a ... ~a" title media-path (today-str) (time-str))))
+    (let ((filename (media-copy-name source-path)))
+      (copy-file source-path
+		 (format nil "~a/~a" *dictionary-home* filename))
+      (format out "~a ... ~a @~a~%" title filename (today-str)))))
+
