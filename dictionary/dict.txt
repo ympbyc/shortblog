@@ -6,3 +6,4 @@ bike office ... The best place to think is on the bike. @2022-07-03
 rin-rin assistants ... I offer free programming lesson. The students in return assist me when I work with computers.  The students will hopefully aqcuire enough skill to work on their own. @2022-07-03
 rin-rin inventions co. ... invents vehicles, appliances, shelters, jobs, etc that are needed for the lives without a lot of money and waste. @2022-07-03
 gyro bike ... a human powered autogyro mounted on a bike. @2022-07-03
+solar rainwater distillation ... Rain water sall be eveporated and the vapors shall condense and collected to produce drinking water.  Primitive filters with sand and charcoal offer limited reliability.  Rain water is prefered over tap water since chroline may evaporate and condense with water.  The collected drinking water shall be tested for pH, heavy metal ions, gut bacteria, etc.  Boiling with solar cooker is also an option. @2022-07-09
