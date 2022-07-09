@@ -3,7 +3,7 @@
 
 (defpackage :miniblog
   (:use #:CL #:uiop #:ppcre)
-  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html
+  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html :share
 	   :dict-make-entry :dict-search :dict-attach-media))
 
 (require 'plump)
@@ -352,8 +352,14 @@
 						       (|pubDate| () ,(rfc822-date (post-date (car posts/day)))))))))))
 	     out)))
 
-(defun mab-aref (idx arr)
-  (if idx (aref idx arr)))
+(defun mab-aref (arr idx)
+  (if arr (aref arr idx)))
+
+(defun maybe (f &rest args)
+  (handler-case
+      (apply f args)
+    (t (c) (declare (ignore c))
+      nil)))
 
 (defun share (datestr)
   (let* ((dt (split-string datestr :separator "\-"))
@@ -366,7 +372,7 @@
 	       (atcl-node (mab-aref selection 0))
 	       (atcl-html (plump:serialize atcl-node nil))
 	       (desc (plump:text (mab-aref (clss:select "p" atcl-node) 0)))
-	       (img-src (format nil "~a/~a" ym (plump:attribute (mab-aref (clss:select "img" atcl-node) 0) "src"))))
+	       (img-src (format nil "~a/~a" ym (maybe #'plump:attribute (mab-aref (clss:select "img" atcl-node) 0) "src"))))
 	 (println (html:html->string
 		   `(html (lang ,*language*)
 			  ,(html-head title nil desc img-src (format nil "~a/~a.html" ym (nth 2 dt)))
