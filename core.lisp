@@ -3,7 +3,7 @@
 
 (defpackage :miniblog
   (:use #:CL #:uiop #:ppcre)
-  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html :share
+  (:export :make-post :post :add-media :show-posts :generate-thumbnails :save-html :share :exec-convert
 	   :dict-make-entry :dict-search :dict-attach-media))
 
 (require 'plump)
@@ -97,6 +97,16 @@
   `(sort (subdirectories (blog-rel-path "blog/")) #'string>
 	 :key #'pathname-month))
 
+(defun exec-convert (file facep thumb-name)
+  (with-output-to-string (out)
+    (sb-ext:run-program
+     "convert"
+     `(,(format nil "~a" file)
+	,@(if facep *blur-faces* *thumbnail-param*)
+	,thumb-name)
+     :search t :wait t :output out)))
+
+
 (defun generate-thumbnails (&key force)
   (loop for dir in (blogs-across-months)
      do (loop for file in (uiop:directory-files dir)
@@ -113,13 +123,8 @@
 				      (sb-ext:run-program "facedetect" `("-q" ,(format nil "~a" file)) :search t :wait t))))
 			(t (c) (format t "NOTICE: ~a" c))))
 		  (format t "~a: ~a~%" file
-			  (with-output-to-string (out)
-			    (sb-ext:run-program
-			     "convert"
-			     `(,(format nil "~a" file)
-				,@(if facep *blur-faces* *thumbnail-param*)
-				,thumb-name)
-			     :search t :wait t :output out))))))))
+			  (exec-convert file facep thumb-name)))))))
+
 
 (defun html-head (title &optional indexp desc image path)
   `(head (prefix "og:https://ogp.me/ns#") (meta (charset "utf-8"))
