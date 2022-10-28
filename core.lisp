@@ -13,7 +13,7 @@
 
 (in-package :miniblog)
 
-(defparameter *blog-home* "~/Work/miniblog")
+(defparameter *blog-home* "~/shortblog")
 (defparameter *blog-title*  "NORIFIX diary")
 (defparameter *blog-description* "(norifix|ympbyc) I like to fix/remake and use old things.")
 (defparameter *thumbnail-param* '("-thumbnail" "640"))
