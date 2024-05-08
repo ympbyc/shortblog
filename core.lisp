@@ -13,7 +13,7 @@
 
 (in-package :miniblog)
 
-(defparameter *blog-home* "~/shortblog")
+(defparameter *blog-home* "/home/ubuntu/shortblog")
 (defparameter *blog-title*  "NORIFIX diary")
 (defparameter *blog-description* "(norifix|ympbyc) I like to fix/remake and use old things.")
 (defparameter *thumbnail-param* '("-thumbnail" "640"))
@@ -287,13 +287,15 @@
 			      (img (class "icon"
 				    src "profile.jpg"
 				    alt "profile picture of the author"))
-			      (br ()) ,*blog-description*)
+			        (br ()) ,*blog-description*)
 			   (ul (class "blog-list")
 			       ,(loop for dir in (blogs-across-months)
 				   for blog = (format nil "~a/index.html" (pathname-month dir))
 				   collect `(li () (a (href ,blog) ,(pathname-month dir)))))
 			   (section ()
-			    (a (href "../dictionary/dict.txt") "Rin-rin Dictionary")))))
+                        (iframe (src "/diary-edit.php" title "editor" width "100%" height "100"))
+                        ;;(a (href "../dictionary/dict.txt") "Rin-rin Dictionary")
+                        ))))
 	     out)))
 
 (defun save-html (&key force)
