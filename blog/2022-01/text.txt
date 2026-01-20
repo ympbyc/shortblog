@@ -1,0 +1,108 @@
+1/1 We went to Osaka by ferry and train.  I didn't eat a thing for the stomach. @2022-01-03 21:16
+1/2 Visited the tomb of aunt in law who passed away last year.  Then Yacchan let me pack her おせち osechi for me to take home.  I left Osaka at 11 and train -> ferry -> car -> home.  I ate the おせち on the ferry.  里芋、こんにゃく、にんじん、百合根、ごぼう、昆布巻き、えび、いくら、鶏肉、栗きんとん、黒豆.  All very soft and gentle for the stomach.  It tasted delicious. @2022-01-03 21:21
+Sunny.  Ate お汁粉 with もち for breakfast.  I carried out my day according to the plan I made last night.  First I tried to open an account for stock exchange but it had to be put on hold.  Second, I ordered tactile switches needed to fix Jizo's sampling machine.  Next I washed cloth, myself in the bath, and dishes.  Next Mio's leaking 湯たんぽ hot water tank for warmth got soldered w/ the solder and the iron I bought yesterday. An email was sent. Then I climbed on the roof to fix a small 12V solar panel in place.  I bent a pair of aluminium strip I picked up in the polytech trash bin, insert one ends to the roof and the panel latches on to the other ends.  I lay the wire and started experimenting with lighting options.  TODO: make a simple 100V inverter.  I ate もち, 雑煮, and ぶり大根 for lunch.　Cabling material was low on stock so I drove to home center in next town to buy it.  I bought materials and tools I will list separately.  I tried to pay with a credit card but it got rejected.  I ran to the ATM in a convinience store nearby and got money off the bank and got back to the store.  The lady at the cashier helped me carry the things I bought.  She asked questions about me.  It was warming conversing.  I noticed I was high probably from the cbn isolate dissolved into cbd oil + カナムグラ japanese-hop tea I took in the morning + coffee + running.  Feeling of gratitude toward life.  I came home and went for a walk with cindy the cat. At night I sealed the large window on the door in the kitchen with the polycarbonate board for insulation.  I ate くまごろう bread and ぶり大根鍋 for dinner. @2022-01-03 22:03
+MATERIALS: (today) 2x 10m enamel wire,  2x 3m 100Φ aluminium duct,  A door size polycarbonate board, a tinned hard biscuit, a PET bottle lantern, a LED light bulb w/ movement sensor, and a cable cover (yesterday) solder for stainless steel, sticky rubber. @2022-01-03 22:09
+TOOLS: A pair of strong scissors,  a たわし tawashi for dish-washing, an ear-muff, a 3.2Φ drill bit. @2022-01-03 22:10
+FILE: IMGP0059-2022-01-03-22-20.JPG @2022-01-03 22:20
+FILE: IMGP0061-2022-01-03-22-20.JPG @2022-01-03 22:20
+FILE: IMGP0062-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0063-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0064-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0066-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0067-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0068-2022-01-03-22-21.JPG @2022-01-03 22:21
+FILE: IMGP0070-2022-01-03-22-21.JPG @2022-01-03 22:21
+I made a door for cindy in the stove room. @2022-01-03 22:43
+1/4 Practice MAG welding at polytech.  At home at night I setup a basis for speech programming language.  Web Speech Recognition API + Web Speech API + kuromoji.js + JS-CLOS. @2022-01-10 21:44
+1/5 MAG.  Continue developing the voice programming language. @2022-01-10 21:44
+1/6 MAG. 15:58 Coco and kids came home by train + ferry.  We went to pahuna nepali curry restaurant. @2022-01-10 21:46
+1/8 Put the fan on the wall.  Put the 50W solar panel on the roof.  Emailed Ken-san.  Booted puppy linux on issei's PC.  etc @2022-01-10 21:49
+1/9 Played with kids in the school ground.  I placed the solar wall facing south on the ground floor and run the aluminium duct into the room through the hole in a board I put in place of a broken window glass. @2022-01-10 21:52
+1/10 BS TV Tokyo came to film the Digital Fusuma Karakuri.  Takeshi, Yoshikawa-san, and I met up at Orono school and got filmed. @2022-01-10 21:54
+visited ken-san in the forest. Heavy rain started to fall. He borrowed me his US army rain jacket and head light. @2022-01-11 21:14
+TODO: call sbi support desk. @2022-01-12 21:28
+LINK: https://projectwild.jp  Project WILD 自然や環境のために行動できる人を育成することに取り組んだ野生生物を題材としたプログラム @2022-01-13 14:48
+LINK: https://note.com/schoolonokoro 淡路島森の学校おのころ @2022-01-13 14:49
+QUOTE: 時間とは全てのことが同時に起きることを防ぐ自然の法則である。 @2022-01-13 14:53
+1/14 Jeff messaged.  He told me he's been living in his van and he got punched by a thief who broke into his van.  I was so worried I got out of polytech early. @2022-01-18 20:07
+1/14 Ken-san came.  We ate dinner together. He stayed overnight upstairs. @2022-01-18 20:08
+PRIVATE: 1/15 I sent Jeff $500 via paypal. @2022-01-18 20:08
+1/15 餅つき。So much fun. @2022-01-18 20:10
+1/16 Played gate ball with issei family. @2022-01-18 20:10
+TODO: Replace Jizo sampler rotery encoder.  Make bodhi linux bootable USB. @2022-01-19 19:31
+shortblogの元テキストの大半を消失してしまった。(泣) @2022-01-19 22:22
+FILE: IMGP0072-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0074-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0077-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0078-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0079-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0080-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0081-2022-01-23-21-36.JPG @2022-01-23 21:36
+FILE: IMGP0082-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0083-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0085-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0086-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0088-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0091-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0092-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0093-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0094-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0095-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0096-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0097-2022-01-23-21-37.JPG @2022-01-23 21:37
+FILE: IMGP0098-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0102-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0105-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0106-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0108-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0001-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0002-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0003-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0005-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0007-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0008-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0010-2022-01-23-21-38.JPG @2022-01-23 21:38
+FILE: IMGP0011-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0013-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0015-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0016-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0017-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0018-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0023-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0024-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0026-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0034-2022-01-23-21-39.JPG @2022-01-23 21:39
+FILE: IMGP0037-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0040-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0044-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0045-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0047-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0049-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0053-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0054-2022-01-23-21-40.JPG @2022-01-23 21:40
+FILE: IMGP0056-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0058-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0061-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0062-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0064-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0065-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0066-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0067-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0068-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0069-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0070-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0071-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0072-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0073-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0074-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0075-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0077-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0078-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0079-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0080-2022-01-23-21-41.JPG @2022-01-23 21:41
+FILE: IMGP0081-2022-01-23-21-41.JPG @2022-01-23 21:41
+1/22 鎮守の森へ。w/ 宮fam, sea & sky. 森のおじいさんが薪用に杉の丸太を割って置いておいてくれたので、担ぎ上げたりロープと滑車の仕掛けで引っ張り上げたりした。途中で智が自転車でやってきた。お茶会。 @2022-01-23 22:18
+1/22 午後、お隣の高野槇の木を試しに少し剪定。 @2022-01-23 22:19
+1/23 雨。里山大地自然学校にスタッフとして初参加。主な仕事は焚き火の番と片付け。持ち物は切り出しナイフと鋸と竹割りナタのみ。昨日森で中国茶のおじさんがやっていたのを真似て、竹筒でお湯を沸かした。急須代わりの竹で、その場で摘んで焚き火で炙ったお茶の葉と冬苺の葉のお茶を淹れて、竹のコップに注いで振る舞った。昼ゴハンは大根と人参の炊き込みご飯と、鶏ガラ大根葉スープ。おやつはワッフル。 @2022-01-23 22:24
+1/23 Installed Bodhi Linux 6.0 to issei's computer. @2022-01-23 22:24
+Replaced the weak part of Mac charging cable @2022-01-23 22:45
