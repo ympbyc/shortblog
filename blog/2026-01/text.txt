@@ -14,3 +14,4 @@ I originally designed this shortblog tool to assist my thoughts.  However, the w
 maybe it's a good idea to do an another iteration and make an off-line version of shortblog and call it in a different name. @2026-01-20 20:20
 FILE: proposal-2026-01-20-20-22.pdf @2026-01-20 20:22
 This is the project I'm working on in the background. @2026-01-20 20:23
+I made a "private" version of shortblog. It's just a git branch not called gh-pages. How geneus @2026-01-20 20:54
